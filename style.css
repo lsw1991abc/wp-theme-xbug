@@ -1,4 +1,15 @@
 @charset "UTF-8";
+/*
+Theme Name: xBug
+Theme URI: http://xbug.lol/
+Author: Wizard(lsw1991abc@gmail.com)
+Author URI: http://xbug.lol/
+Description: description.
+Version: 0.1
+License: BSD 3-Clause License
+Tags: xbug, blog, wizard
+Text Domain: http://xbug.lol/
+*/
 @font-face {
   font-family: "Roboto";
   src: url('font/Roboto-Bold.ttf') format('truetype');

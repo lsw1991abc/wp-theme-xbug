@@ -10,7 +10,7 @@
 
 一般的，X用于表示数学中的未知数，也有表示无限的。还有表示"~~XXX~~"(被和谐)的...
 
-## 笑谈xBug - <a href="http://xbug.lol" target="_blank" title="笑谈xBug">xbug.lol</a>
+## 笑谈xBug - [xbug.lol](http://xbug.lol)
 呵呵，此LOL非League of Legends，是**Laugh Out Loud**   
 
 > X是人生无法捉摸的未来世界，充满了不确定的因素，等待你的也许是酸，也许是苦，但你必须为你所作出的决定付出应有的代价，而你却要无怨无悔！
