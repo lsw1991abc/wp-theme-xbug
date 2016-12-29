@@ -15,15 +15,15 @@
   <!-- 卡片 begin -->
   <div class="mdl-cell mdl-cell--12-col mdl-card">
     <div class="mdl-card__title mdl-card--border">
-      <h4 class="mdl-card__title-text">随机文章</h4>
+      <h4 class="mdl-card__title-text">最新文章</h4>
     </div>
     <div class="mdl-card__supporting-text mdl-list">
-      <div class="mdl-list__item"><a href="#" target="_blank">文章标题</a></div>
-      <div class="mdl-list__item"><a href="#" target="_blank">文章标题</a></div>
-      <div class="mdl-list__item"><a href="#" target="_blank">文章标题</a></div>
-      <div class="mdl-list__item"><a href="#" target="_blank">文章标题</a></div>
-      <div class="mdl-list__item"><a href="#" target="_blank">文章标题</a></div>
-      <div class="mdl-list__item"><a href="#" target="_blank">文章标题</a></div>
+      <?php
+      the_widget('WP_Widget_Recent_Posts', array(), array());
+      ?>
+      <div class="mdl-list__item"><a href="#" target="_blank"
+                                     title="title">title</a>
+      </div>
     </div>
   </div>
   <!-- 卡片 end -->
@@ -32,20 +32,13 @@
       <h4 class="mdl-card__title-text">最新评论</h4>
     </div>
     <div class="mdl-card__supporting-text mdl-list">
-      <div class="mdl-list__item"><i class="fa fa-star"></i><a href="#" target="_blank">评论</a>
-      </div>
-      <div class="mdl-list__item"><i class="fa fa-star"></i><a href="#" target="_blank">评论</a>
-      </div>
-      <div class="mdl-list__item"><i class="fa fa-star"></i><a href="#" target="_blank">评论</a>
-      </div>
-      <div class="mdl-list__item"><i class="fa fa-star"></i><a href="#" target="_blank">评论</a>
-      </div>
-      <div class="mdl-list__item"><i class="fa fa-star"></i><a href="#" target="_blank">评论</a>
-      </div>
-      <div class="mdl-list__item"><i class="fa fa-star"></i><a href="#" target="_blank">评论</a>
-      </div>
-      <div class="mdl-list__item"><i class="fa fa-star"></i><a href="#" target="_blank">评论</a>
-      </div>
+      <?php
+      the_widget('WP_Widget_Recent_Comments', array(
+          'number' => '5'
+      ), array());
+      ?>
+          <div class="mdl-list__item"><i class="fa fa-star"></i><a href="#" target="_blank">评论</a>
+          </div>
     </div>
   </div>
   <div class="mdl-cell mdl-cell--12-col mdl-card">
@@ -53,16 +46,9 @@
       <h4 class="mdl-card__title-text">标签</h4>
     </div>
     <div class="mdl-card__supporting-text">
-      <span class="mdl-chip"><a href="#" target="_blank" class="mdl-chip__text">标签</a></span>
-      <span class="mdl-chip"><a href="#" target="_blank" class="mdl-chip__text">标签</a></span>
-      <span class="mdl-chip"><a href="#" target="_blank" class="mdl-chip__text">标签</a></span>
-      <span class="mdl-chip"><a href="#" target="_blank" class="mdl-chip__text">标签</a></span>
-      <span class="mdl-chip"><a href="#" target="_blank" class="mdl-chip__text">标签</a></span>
-      <span class="mdl-chip"><a href="#" target="_blank" class="mdl-chip__text">标签</a></span>
-      <span class="mdl-chip"><a href="#" target="_blank" class="mdl-chip__text">标签</a></span>
-      <span class="mdl-chip"><a href="#" target="_blank" class="mdl-chip__text">标签</a></span>
-      <span class="mdl-chip"><a href="#" target="_blank" class="mdl-chip__text">标签</a></span>
-      <span class="mdl-chip"><a href="#" target="_blank" class="mdl-chip__text">标签</a></span>
+      <?php
+      the_widget('WP_Widget_Tag_Cloud', array(), array())
+      ?>
       <span class="mdl-chip"><a href="#" target="_blank" class="mdl-chip__text">标签</a></span>
     </div>
   </div>
@@ -71,30 +57,9 @@
       <h4 class="mdl-card__title-text">友情链接</h4>
     </div>
     <div class="mdl-card__supporting-text">
-            <span class="mdl-chip mdl-chip--contact">
-              <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
-              <a href="#" target="_blank" class="mdl-chip__text">友情链接</a>
-            </span>
-      <span class="mdl-chip mdl-chip--contact">
-              <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
-              <a href="#" target="_blank" class="mdl-chip__text">友情链接</a>
-            </span>
-      <span class="mdl-chip mdl-chip--contact">
-              <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
-              <a href="#" target="_blank" class="mdl-chip__text">友情链接</a>
-            </span>
-      <span class="mdl-chip mdl-chip--contact">
-              <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
-              <a href="#" target="_blank" class="mdl-chip__text">友情链接</a>
-            </span>
-      <span class="mdl-chip mdl-chip--contact">
-              <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
-              <a href="#" target="_blank" class="mdl-chip__text">友情链接</a>
-            </span>
-      <span class="mdl-chip mdl-chip--contact">
-              <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
-              <a href="#" target="_blank" class="mdl-chip__text">友情链接</a>
-            </span>
+      <?php
+      the_widget('WP_Widget_Links', array(), array())
+      ?>
       <span class="mdl-chip mdl-chip--contact">
               <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
               <a href="#" target="_blank" class="mdl-chip__text">友情链接</a>

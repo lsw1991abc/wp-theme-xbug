@@ -14,4 +14,7 @@ remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'feed_links', 2);
 remove_action('wp_head', 'feed_links_extra', 3);
 
+// 设置页面title，只需wp_head()
+add_theme_support( 'title-tag' );
+
 ?>
