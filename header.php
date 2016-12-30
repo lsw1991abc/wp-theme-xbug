@@ -63,6 +63,7 @@ $templateDirUri = esc_url(get_template_directory_uri());
         </div>
       </div>
         <?php echo strip_tags(wp_nav_menu(array(
+            'theme_location' => 'header_menu',
             'container' => 'nav',
             'container_class' => 'mdl-navigation',
             'container_id' => 'xbug-navigation-header',
@@ -75,13 +76,20 @@ $templateDirUri = esc_url(get_template_directory_uri());
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <nav class="mdl-navigation">
+      <?php echo strip_tags(wp_nav_menu(array(
+          'theme_location' => 'drawer_menu',
+          'container' => 'nav',
+          'container_class' => 'mdl-navigation',
+          'echo' => false,
+          'items_wrap' => '%3$s'
+      )), '<nav><a>'); ?>
+    <!--<nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#">文章归档</a>
       <a class="mdl-navigation__link" href="#">下载仓库</a>
       <a class="mdl-navigation__link" href="#">推荐图书</a>
       <a class="mdl-navigation__link" href="#">友情链接</a>
       <a class="mdl-navigation__link" href="#">留言板</a>
       <a class="mdl-navigation__link" href="#">关于我</a>
-    </nav>
+    </nav>-->
   </div>
   <main class="mdl-layout__content nicescroll">

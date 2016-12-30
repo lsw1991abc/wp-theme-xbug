@@ -28,5 +28,12 @@ function xbug_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'xbug_excerpt_more', '阅读全文');
 
+register_nav_menus(array(
+    'header_menu' => __('头部'),
+    /*'pre_footer_menu' => __('副页脚'),
+    'footer_menu' => __('页脚'),*/
+    'drawer_menu' => __('抽屉')
+));
+
 
 ?>
