@@ -17,4 +17,16 @@ remove_action('wp_head', 'feed_links_extra', 3);
 // 设置页面title，只需wp_head()
 add_theme_support( 'title-tag' );
 
+// 修改摘要文字长度
+function xbug_excerpt_length($length) {
+    return 200;
+}
+add_filter('excerpt_length', 'xbug_excerpt_length', 200);
+
+function xbug_excerpt_more($more) {
+    return '......';
+}
+add_filter('excerpt_more', 'xbug_excerpt_more', '阅读全文');
+
+
 ?>
