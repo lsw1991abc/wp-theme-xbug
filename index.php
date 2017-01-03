@@ -7,19 +7,20 @@ get_header();
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--9-col xbug-card-list">
     <?php
-    if (have_posts()) :
-      while (have_posts()) :
+    if ( have_posts() ) {
+      while ( have_posts() ) {
         the_post();
-        get_template_part('template/content-post', get_post_format());
-      endwhile;
-    else:
-      get_template_part('template/content-none', get_post_format());
-    endif;
-    the_posts_pagination( array(
+        get_template_part( 'template/content-post', get_post_format() );
+      }
+      the_posts_pagination( array(
+        'screen_reader_text' => false,
         'prev_text'          => __( '上一页', 'xbug' ),
-        'next_text'          => __( '下一页', 'xbug' ),
-        'before_page_number' => '' . __( '页码', 'xbug' ) . '',
-    ) );
+        'next_text'          => __( '下一页', 'xbug' )
+      ) );
+    } else {
+      get_template_part( 'template/content-none', get_post_format() );
+    }
+
     ?>
     <!-- 分页工具 -->
     <div class="xbug-pagination">
