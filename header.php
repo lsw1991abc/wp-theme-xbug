@@ -62,27 +62,18 @@ $templateDirUri = esc_url(get_template_directory_uri());
           <input type="text" name="q" class="mdl-textfield__input" id="header-search-input" />
         </div>
       </div>
-        <?php echo strip_tags(wp_nav_menu(array(
-            'theme_location' => 'header_menu',
-            'container' => 'nav',
-            'container_class' => 'mdl-navigation',
-            'container_id' => 'xbug-navigation-header',
-            'echo' => false,
-            'items_wrap' => '%3$s'
-        )), '<nav><a>'); ?>
+        <?php wp_nav_menu(array(
+            'theme_location' => 'header_menu'
+        ));?>
     </div>
     <div class="mdl-layout__drawer-button">
       <i class="fa fa-bars"></i>
     </div>
   </header>
   <div class="mdl-layout__drawer">
-      <?php echo strip_tags(wp_nav_menu(array(
-          'theme_location' => 'drawer_menu',
-          'container' => 'nav',
-          'container_class' => 'mdl-navigation',
-          'echo' => false,
-          'items_wrap' => '%3$s'
-      )), '<nav><a>'); ?>
+    <?php wp_nav_menu(array(
+        'theme_location' => 'drawer_menu'
+    ));?>
     <!--<nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#">文章归档</a>
       <a class="mdl-navigation__link" href="#">下载仓库</a>

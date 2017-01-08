@@ -7,14 +7,18 @@ get_header();
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--9-col xbug-card-list">
     <?php
-    if ( have_posts() ) {
-      while ( have_posts() ) {
+    if (have_posts()) {
+      while (have_posts()) {
         the_post();
-        get_template_part( 'template/content-post', get_post_format() );
+        get_template_part('template/content-post', get_post_format());
       }
-      xbug_the_posts_pagination();
+      xbug_posts_pagination(array(
+          'prev_text' => '<i class="fa fa-chevron-left"></i>',
+          'next_text' => '<i class="fa fa-chevron-right"></i>',
+          'screen-reader-text' => 'xBug'
+      ));
     } else {
-      get_template_part( 'template/content-none', get_post_format() );
+      get_template_part('template/content-none', get_post_format());
     }
     ?>
   </div>
