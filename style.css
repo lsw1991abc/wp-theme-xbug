@@ -3949,6 +3949,58 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
 .mdl-navigation__link .material-icons {
   vertical-align: middle;
 }
+.xbug-navigation {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+}
+.xbug-navigation > ul {
+  list-style: none;
+}
+.xbug-navigation > ul > li {
+  padding: 0 12px;
+  line-height: 46px;
+}
+.xbug-navigation__link {
+  color: #424242;
+  text-decoration: none;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  opacity: 0.87;
+}
+.xbug-navigation__link .material-icons {
+  vertical-align: middle;
+}
+.mdl-layout__header-row .xbug-navigation > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mdl-layout__header-row .xbug-navigation > ul > li {
+  line-height: 64px;
+}
+.mdl-layout__header-row .xbug-navigation > ul > li > a {
+  color: #ffffff;
+}
+.mdl-layout__header-row .xbug-navigation__link {
+  color: #424242;
+  text-decoration: none;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  opacity: 0.87;
+}
+.mdl-layout__header-row .xbug-navigation__link .material-icons {
+  vertical-align: middle;
+}
 .mdl-layout {
   width: 100%;
   height: 100%;

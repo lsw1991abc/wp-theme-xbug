@@ -4863,6 +4863,69 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   }
 }
 
+.xbug-navigation {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+
+  > ul {
+    list-style: none;
+    > li {
+      padding: 0 12px;
+      line-height: 46px;
+    }
+  }
+
+  &__link {
+    color: rgb(66, 66, 66);
+    text-decoration: none;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    opacity: 0.87;
+
+    .material-icons {
+      vertical-align: middle;
+    }
+  }
+}
+
+.mdl-layout__header-row {
+  .xbug-navigation {
+    > ul {
+      display: flex;
+      flex-wrap: wrap;
+      > li {
+        line-height: 64px;
+        > a {
+          color: @xbug-a-color-light;
+        }
+      }
+    }
+
+    &__link {
+      color: rgb(66, 66, 66);
+      text-decoration: none;
+      margin: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0;
+      opacity: 0.87;
+
+      .material-icons {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
 .mdl-layout {
   width: 100%;
   height: 100%;
