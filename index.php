@@ -12,26 +12,11 @@ get_header();
         the_post();
         get_template_part( 'template/content-post', get_post_format() );
       }
-      the_posts_pagination( array(
-        'screen_reader_text' => false,
-        'prev_text'          => __( '上一页', 'xbug' ),
-        'next_text'          => __( '下一页', 'xbug' )
-      ) );
+      xbug_the_posts_pagination();
     } else {
       get_template_part( 'template/content-none', get_post_format() );
     }
-
     ?>
-    <!-- 分页工具 -->
-    <div class="xbug-pagination">
-      <a href="#" class="xbug-pagination__link--arrow"><i class="fa fa-chevron-left"></i></a>
-      <a href="#" class="xbug-pagination__link">1</a>
-      <a href="#" class="xbug-pagination__link">2</a>
-      <a href="#" class="xbug-pagination__link">3</a>
-      <a href="#" class="xbug-pagination__link">4</a>
-      <a href="#" class="xbug-pagination__link">5</a>
-      <a href="#" class="xbug-pagination__link--arrow"><i class="fa fa-chevron-right"></i></a>
-    </div>
   </div>
   <?php get_sidebar(); ?>
 </div>
