@@ -6,8 +6,8 @@ get_header();
       <?php
       if (have_posts()) :
         the_post();
-        get_template_part('template/content-single', get_post_format());
-      else: get_template_part('template/content-none', get_post_format());
+        get_template_part('template/single-single', get_post_format());
+      else: get_template_part('template/single-none', get_post_format());
       endif;
       ?>
 

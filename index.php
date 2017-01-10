@@ -10,7 +10,7 @@ get_header();
     if ( have_posts() ) {
       while ( have_posts() ) {
         the_post();
-        get_template_part( 'template/content-post', get_post_format() );
+        get_template_part( 'template/single-post', get_post_format() );
       }
       xbug_posts_pagination( array(
         'mid_size'           => '2',
@@ -19,7 +19,7 @@ get_header();
         'screen-reader-text' => 'xBug'
       ) );
     } else {
-      get_template_part( 'template/content-none', get_post_format() );
+      get_template_part( 'template/single-none', get_post_format() );
     }
     ?>
   </div>
