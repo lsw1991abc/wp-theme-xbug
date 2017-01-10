@@ -48,7 +48,7 @@ function xbug_posts_pagination($args = array()) {
 }
 
 function get_sidebar_page() {
-  echo get_template_part('sidebar', 'page');
+  get_sidebar('page');
 }
 
 ?>
