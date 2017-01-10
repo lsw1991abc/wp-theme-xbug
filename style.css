@@ -14,6 +14,10 @@ Text Domain: http://xbug.lol/
   font-family: "Roboto";
   src: url('font/Roboto-Bold.ttf') format('truetype');
 }
+* {
+  padding: 0;
+  margin: 0;
+}
 html {
   color: #263238;
   font-size: 1em;
@@ -354,6 +358,9 @@ ol {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0;
+}
+ul {
+  list-style: none;
 }
 /**
  * Class Name Styles
@@ -2620,7 +2627,7 @@ input.mdl-button[type="submit"] {
   border-radius: 2px;
   box-sizing: border-box;
 }
-.xbug-card-list > .mdl-card:first-of-type {
+.mdl-card-list > .mdl-card:first-of-type {
   margin-top: 0;
 }
 .mdl-card__media {
@@ -2661,9 +2668,9 @@ input.mdl-button[type="submit"] {
   align-self: flex-end;
   color: inherit;
   /*display: block;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;*/
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;*/
   font-size: 18px;
   font-weight: 300;
   line-height: normal;
@@ -2718,7 +2725,7 @@ input.mdl-button[type="submit"] {
   right: 32px;
 }
 .mdl-card__actions {
-  font-size: 16px;
+  /*font-size: 16px;*/
   line-height: normal;
   width: 100%;
   background-color: transparent;
@@ -3957,9 +3964,6 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   box-sizing: border-box;
-}
-.xbug-navigation > ul {
-  list-style: none;
 }
 .xbug-navigation > ul > li {
   padding: 0 12px;
@@ -6787,10 +6791,6 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 .xbug-article-block .xbug-article-content p {
   text-indent: 28px;
 }
-.xbug-sidebar {
-  padding-left: 0;
-  list-style: none;
-}
 .xbug-sidebar > li {
   font-size: 16px;
   font-weight: 400;
@@ -6811,18 +6811,23 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
   font-size: 22px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.xbug-sidebar > li > ul,
-.xbug-sidebar > li div {
-  list-style: none;
+.xbug-sidebar > li > div {
   padding: 5px 8px;
 }
-.xbug-sidebar > li > ul.mdl-card__actions,
-.xbug-sidebar > li div.mdl-card__actions {
+.xbug-sidebar > li > ul {
+  padding: 5px 8px;
+}
+.xbug-sidebar > li > ul li {
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.xbug-sidebar > li > ul.mdl-card__actions {
   display: flex;
   flex-direction: row;
 }
-.xbug-sidebar > li > ul.mdl-card__actions > li,
-.xbug-sidebar > li div.mdl-card__actions > li {
+.xbug-sidebar > li > ul.mdl-card__actions > li {
   flex-grow: 1;
   text-align: center;
 }

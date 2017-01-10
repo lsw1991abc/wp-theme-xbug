@@ -28,6 +28,11 @@ Text Domain: http://xbug.lol/
   src: url('./font/Roboto-Bold.ttf') format('truetype');
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 html {
   color: @xbug-a-color-dark;
   font-size: 1em;
@@ -395,6 +400,10 @@ ul, ol {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0;
+}
+
+ul {
+  list-style: none;
 }
 
 /**
@@ -3253,11 +3262,13 @@ input.mdl-button[type="submit"] {
   background-color: transparent;
 }
 
-.mdl-button--primary.mdl-button--primary {
-  color: rgb(63, 81, 181);
+.mdl-button--primary {
+  &.mdl-button--primary {
+    color: rgb(63, 81, 181);
 
-  .mdl-ripple {
-    background: rgb(255, 255, 255);
+    .mdl-ripple {
+      background: rgb(255, 255, 255);
+    }
   }
 }
 
@@ -3266,11 +3277,13 @@ input.mdl-button[type="submit"] {
   background-color: rgb(63, 81, 181);
 }
 
-.mdl-button--accent.mdl-button--accent {
-  color: rgb(255, 64, 129);
+.mdl-button--accent {
+  &.mdl-button--accent {
+    color: rgb(255, 64, 129);
 
-  .mdl-ripple {
-    background: rgb(255, 255, 255);
+    .mdl-ripple {
+      background: rgb(255, 255, 255);
+    }
   }
 }
 
@@ -3300,8 +3313,10 @@ input.mdl-button[type="submit"] {
   color: rgba(0, 0, 0, 0.26);
 }
 
-.mdl-button .material-icons {
-  vertical-align: middle;
+.mdl-button {
+  .material-icons {
+    vertical-align: middle;
+  }
 }
 
 .mdl-card {
@@ -3321,82 +3336,81 @@ input.mdl-button[type="submit"] {
   background: rgb(255, 255, 255);
   border-radius: 2px;
   box-sizing: border-box;
-}
-
-.xbug-card-list {
-  > .mdl-card {
-    &:first-of-type {
-      margin-top: 0;
+  &-list {
+    > .mdl-card {
+      &:first-of-type {
+        margin-top: 0;
+      }
     }
   }
-}
 
-.mdl-card__media {
-  /*background-color: rgb(255, 64, 129);*/
-  background-repeat: repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-origin: padding-box;
-  background-attachment: scroll;
-  box-sizing: border-box;
-}
-
-.mdl-card__title {
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: rgb(0, 0, 0);
-  display: block;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-  line-height: normal;
-  padding: 16px 16px;
-  -webkit-perspective-origin: 165px 56px;
-  perspective-origin: 165px 56px;
-  -webkit-transform-origin: 165px 56px;
-  transform-origin: 165px 56px;
-  box-sizing: border-box;
-
-  &.mdl-card--border {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  &__media {
+    /*background-color: rgb(255, 64, 129);*/
+    background-repeat: repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-origin: padding-box;
+    background-attachment: scroll;
+    box-sizing: border-box;
   }
-}
 
-.mdl-card__title-text {
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-  color: inherit;
-  /*display: block;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;*/
-  font-size: 18px;
-  font-weight: 300;
-  line-height: normal;
-  overflow: hidden;
-  -webkit-transform-origin: 149px 48px;
-  transform-origin: 149px 48px;
-  margin: 0;
-}
+  &__title {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    display: block;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: stretch;
+    -ms-flex-pack: stretch;
+    justify-content: stretch;
+    line-height: normal;
+    padding: 16px 16px;
+    -webkit-perspective-origin: 165px 56px;
+    perspective-origin: 165px 56px;
+    -webkit-transform-origin: 165px 56px;
+    transform-origin: 165px 56px;
+    box-sizing: border-box;
 
-.mdl-card__subtitle-text {
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.54);
-  margin: 0;
-}
+    &.mdl-card--border {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
 
-.mdl-card__supporting-text {
-  color: rgba(0, 0, 0, 0.54);
-  font-size: 1rem;
-  line-height: 18px;
-  overflow: hidden;
-  padding: 8px 16px;
-  width: 100%;
+  &__title-text {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    color: inherit;
+    /*display: block;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;*/
+    font-size: 18px;
+    font-weight: 300;
+    line-height: normal;
+    overflow: hidden;
+    -webkit-transform-origin: 149px 48px;
+    transform-origin: 149px 48px;
+    margin: 0;
+  }
+
+  &__subtitle-text {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.54);
+    margin: 0;
+  }
+
+  &__supporting-text {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 1rem;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 8px 16px;
+    width: 100%;
+  }
 }
 
 .xbug-card__rich-media {
@@ -3435,29 +3449,31 @@ input.mdl-button[type="submit"] {
   }
 }
 
-.mdl-card__actions {
-  font-size: 16px;
-  line-height: normal;
-  width: 100%;
-  background-color: transparent;
-  padding: 8px;
-  box-sizing: border-box;
+.mdl-card {
+  &__actions {
+    /*font-size: 16px;*/
+    line-height: normal;
+    width: 100%;
+    background-color: transparent;
+    padding: 8px;
+    box-sizing: border-box;
 
-  &.mdl-card--border {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    &.mdl-card--border {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
   }
-}
 
-.mdl-card--expand {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
+  &--expand {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
 
-.mdl-card__menu {
-  position: absolute;
-  right: 16px;
-  top: 16px;
+  &__menu {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
 }
 
 .mdl-checkbox {
@@ -4873,7 +4889,6 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   box-sizing: border-box;
 
   > ul {
-    list-style: none;
     > li {
       padding: 0 12px;
       line-height: 46px;
@@ -7961,8 +7976,6 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 
 .xbug-sidebar {
-  padding-left: 0;
-  list-style: none;
 
   > li {
     font-size: 16px;
@@ -7984,9 +7997,17 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
       font-size: 22px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
-    > ul, div {
-      list-style: none;
+    > div {
       padding: 5px 8px;
+    }
+    > ul {
+      padding: 5px 8px;
+      li {
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
       &.mdl-card__actions {
         display: flex;
         flex-direction: row;
