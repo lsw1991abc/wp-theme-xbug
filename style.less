@@ -7961,7 +7961,42 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 
 .xbug-sidebar {
+  padding-left: 0;
+  list-style: none;
 
+  > li {
+    font-size: 16px;
+    font-weight: 400;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    margin: 8px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    > .widgettitle {
+      padding: 5px 8px;
+      margin: 0;
+      line-height: 32px;
+      font-size: 22px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    > ul, div {
+      list-style: none;
+      padding: 5px 8px;
+      &.mdl-card__actions {
+        display: flex;
+        flex-direction: row;
+        > li {
+          flex-grow: 1;
+          text-align: center;
+        }
+      }
+    }
+  }
 }
 
 .xbug-pagination {
