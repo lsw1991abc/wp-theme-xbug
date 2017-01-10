@@ -6826,14 +6826,17 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
   flex-grow: 1;
   text-align: center;
 }
-.xbug-pagination {
+nav.navigation.pagination {
   color: #263238;
   text-align: center;
   font-size: 1.3em;
   margin: 16px;
 }
-.xbug-pagination .xbug-pagination__link {
+nav.navigation.pagination > .nav-links > .page-numbers {
   padding: 0 8px;
+}
+nav.navigation.pagination > .nav-links > .page-numbers.current {
+  border-bottom: 2px solid #ccc;
 }
 .xbug-catalog__label a {
   font-size: 14px;

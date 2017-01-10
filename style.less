@@ -7999,21 +7999,24 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
   }
 }
 
-.xbug-pagination {
-  color: @xbug-a-color-dark;
-  text-align: center;
-  font-size: 1.3em;
-  margin: 16px;
+nav {
+  &.navigation {
+    &.pagination {
+      color: @xbug-a-color-dark;
+      text-align: center;
+      font-size: 1.3em;
+      margin: 16px;
 
-  .xbug-pagination__link {
-    padding: 0 8px;
-    &--active {
-    }
-
-    &--arrow {
+      > .nav-links {
+        > .page-numbers {
+          padding: 0 8px;
+          &.current {
+            border-bottom: 2px solid #ccc;
+          }
+        }
+      }
     }
   }
-
 }
 
 .xbug-catalog {
