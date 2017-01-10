@@ -47,4 +47,8 @@ function xbug_posts_pagination($args = array()) {
   echo str_replace('<h2 class="screen-reader-text">xBug</h2>', '', get_the_posts_pagination($args));
 }
 
+function get_sidebar_page() {
+  echo get_template_part('sidebar', 'page');
+}
+
 ?>
