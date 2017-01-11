@@ -4,6 +4,9 @@ if ( post_password_required() ) {
 }
 ?>
 <?php
+$req      = get_option( 'require_name_email' );
+$aria_req = ( $req ? " aria-required='true'" : '' );
+$html_req = ( $req ? " required='required'" : '' );
 comment_form( array(
   'fields'               => array(
     'author' => '<p class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
