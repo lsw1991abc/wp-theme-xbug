@@ -6883,3 +6883,9 @@ nav.navigation.pagination > .nav-links > .page-numbers.current {
 .xbug-page-tab__horizon .mdl-list__item:not(:first-of-type) {
   border-left: 1px solid #cccccc;
 }
+.xbug-comment-form > .mdl-textfield {
+  display: block;
+}
+.xbug-comment-form > .mdl-textfield#xbug-comment-content {
+  width: 100%;
+}
