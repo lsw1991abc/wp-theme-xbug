@@ -8101,6 +8101,35 @@ nav {
   }
 }
 
+.xbug-comment-list {
+  .xbug-comment-item {
+    margin: 8px 0;
+    > div {
+      display: flex;
+      > div {
+        padding: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+
+        &.comment-avatar {
+
+        }
+
+        &.comment {
+          flex-grow: 1;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+  > .xbug-comment-item {
+    > ul.children {
+      margin-left: 64px;
+      > .xbug-comment-item {
+
+      }
+    }
+  }
+}
 .xbug-comment-form {
   > .mdl-textfield {
     display: block;

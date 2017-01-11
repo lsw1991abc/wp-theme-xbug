@@ -31,7 +31,7 @@ comment_form( array(
   'submit_button'        => '<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">发表评论</button>',
 ) );
 if ( have_comments() ) {
-  echo '<ul>';
+  echo '<ul class="xbug-comment-list">';
   wp_list_comments( array(
     'short_ping' => true,
     'avatar_size'       => 64,

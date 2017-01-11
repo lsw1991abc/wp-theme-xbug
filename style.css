@@ -6883,6 +6883,23 @@ nav.navigation.pagination > .nav-links > .page-numbers.current {
 .xbug-page-tab__horizon .mdl-list__item:not(:first-of-type) {
   border-left: 1px solid #cccccc;
 }
+.xbug-comment-list .xbug-comment-item {
+  margin: 8px 0;
+}
+.xbug-comment-list .xbug-comment-item > div {
+  display: flex;
+}
+.xbug-comment-list .xbug-comment-item > div > div {
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.xbug-comment-list .xbug-comment-item > div > div.comment {
+  flex-grow: 1;
+  margin-left: 16px;
+}
+.xbug-comment-list > .xbug-comment-item > ul.children {
+  margin-left: 64px;
+}
 .xbug-comment-form > .mdl-textfield {
   display: block;
 }
