@@ -72,4 +72,6 @@ function xbug_comment_list( $comment, $args, $depth ) {
   </div>';
 }
 
+add_filter('pre_option_link_manager_enabled','__return_true');
+
 ?>
