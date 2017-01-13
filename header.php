@@ -25,7 +25,7 @@ $templateDirUri = esc_url( get_template_directory_uri() );
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <h1>
-        <a href="#">
+        <a href="<?php echo home_url(); ?>" title="xbug.lol">
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAjCAYAAABiv6+AAAAF0ElEQVR42
           u1aXWxURRRuYnzsg++b+GZiExMJacLLWt1ISjEVqiE2hFVSXqoRUo2/iSyBFPxBDRISlOxDK1BrokRiNWy6Noo2Pm
           BTSkAJRkWLthaxW4otdHdnPAPfkNNx7t/u3W0r9yRftrv3ztyZ+c6Z8525ramJLLLIIivJpJRbCGlCY0j91RJShH2
