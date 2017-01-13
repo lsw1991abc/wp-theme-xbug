@@ -56,8 +56,7 @@ $templateDirUri = esc_url( get_template_directory_uri() );
       <?php get_search_form(); ?>
       <?php wp_nav_menu( array(
         'theme_location'  => 'header_menu',
-        'container'       => 'nav',
-        'container_class' => 'xbug-navigation'
+        'container'       => 'nav'
       ) ); ?>
     </div>
     <div class="mdl-layout__drawer-button">
@@ -67,8 +66,7 @@ $templateDirUri = esc_url( get_template_directory_uri() );
   <div class="mdl-layout__drawer">
     <?php wp_nav_menu( array(
       'theme_location'  => 'drawer_menu',
-      'container'       => 'nav',
-      'container_class' => 'xbug-navigation'
+      'container'       => 'nav'
     ) ); ?>
   </div>
   <main class="mdl-layout__content nicescroll">
