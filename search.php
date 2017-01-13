@@ -1,6 +1,6 @@
 <?php
 /**
- * 归档
+ * 搜索结果
  */
 get_header();
 ?>
@@ -10,9 +10,9 @@ get_header();
       <div class="mdl-card__title">
         <?php
         if ( have_posts() ) {
-          the_archive_title( '<h4 class="mdl-card__title-text">', '</h4>' );
+          printf( __( ' %s 的搜索结果：', 'xbug' ), '<span>' . get_search_query() . '</span>' );
         } else {
-          printf( __( ' %s 目录下没有信息', 'xbug' ), get_the_archive_title() );
+          printf( __( '未找到 %s 相关的信息', 'xbug' ), '<span>' . get_search_query() . '</span>' );
         }
         ?>
       </div>

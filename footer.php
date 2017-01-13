@@ -31,16 +31,15 @@ $templateDirUri = esc_url(get_template_directory_uri());
   <div class="mdl-mini-footer--left-section">
     <ul class="mdl-mini-footer--link-list">
       <li>Copyright &copy; 2010-2016 xBug All rights reserved.</li>
-      <li>Powered by <a href="#">WordPress</a>.</li>
-      <li>Theme by <a href="#">xBug</a>.</li>
+      <li>Powered by <a href="http://wordpress.org/" target="_blank">WordPress</a>.</li>
+      <li>Theme by <a href="http://xbug.lol/">xBug</a>.</li>
     </ul>
   </div>
   <div class="mdl-mini-footer--right-section">
     <ul class="mdl-mini-footer--link-list">
-      <li><a href="#">站点地图</a></li>
+      <li><a href="<?php echo home_url();?>/sitemap.html" target="_blank">站点地图</a></li>
       <li><a href="#">百度统计</a></li>
-      <li><a href="#">鲁ICP备13014029号</a></li>
-      <li><a href="#">鲁公网安备37021302000052号</a></li>
+      <li><a href="http://www.miitbeian.gov.cn/" target="_blank">鲁ICP备13014029号</a></li>
     </ul>
   </div>
 </footer>

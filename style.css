@@ -2624,7 +2624,7 @@ input.mdl-button[type="submit"] {
   z-index: 1;
   position: relative;
   background: #ffffff;
-  border-radius: 2px;
+  /*border-radius: 2px;*/
   box-sizing: border-box;
 }
 .mdl-card-list > .mdl-card:first-of-type {
@@ -2692,6 +2692,30 @@ input.mdl-button[type="submit"] {
   padding: 8px 16px;
   width: 100%;
 }
+.mdl-card__actions {
+  /*font-size: 16px;*/
+  line-height: normal;
+  width: 100%;
+  background-color: transparent;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.mdl-card__actions.mdl-card--border {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.mdl-card--expand {
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.mdl-card__menu {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+.xbug-card-list > .mdl-card:first-of-type {
+  margin-top: 0;
+}
 .xbug-card__rich-media {
   display: flex;
   flex-flow: row wrap;
@@ -2723,27 +2747,6 @@ input.mdl-button[type="submit"] {
   position: absolute;
   bottom: 0;
   right: 32px;
-}
-.mdl-card__actions {
-  /*font-size: 16px;*/
-  line-height: normal;
-  width: 100%;
-  background-color: transparent;
-  padding: 8px;
-  box-sizing: border-box;
-}
-.mdl-card__actions.mdl-card--border {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-.mdl-card--expand {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-.mdl-card__menu {
-  position: absolute;
-  right: 16px;
-  top: 16px;
 }
 .mdl-checkbox {
   position: relative;
@@ -6791,12 +6794,14 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 .xbug-article-block .xbug-article-content p {
   text-indent: 28px;
 }
+.xbug-sidebar .social-pic {
+  width: 170px;
+  height: auto;
+}
 .xbug-sidebar > li {
   font-size: 16px;
   font-weight: 400;
-  overflow: hidden;
   z-index: 1;
-  position: relative;
   background: #ffffff;
   box-sizing: border-box;
   margin: 8px;

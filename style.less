@@ -3334,7 +3334,7 @@ input.mdl-button[type="submit"] {
   z-index: 1;
   position: relative;
   background: rgb(255, 255, 255);
-  border-radius: 2px;
+  /*border-radius: 2px;*/
   box-sizing: border-box;
   &-list {
     > .mdl-card {
@@ -3411,45 +3411,7 @@ input.mdl-button[type="submit"] {
     padding: 8px 16px;
     width: 100%;
   }
-}
 
-.xbug-card__rich-media {
-  display: flex;
-  flex-flow: row wrap;
-  margin-top: -16px;
-  > .mdl-card__media {
-    padding: 16px;
-    width: calc(~"32% - 32px");
-    img {
-      width: 100%;
-      height: 130px;
-    }
-  }
-
-  > .mdl-card__supporting-text {
-    width: calc(~"70% - 32px");
-    word-break: break-all;
-
-    .xbug-card__text-summary {
-      height: 90px;
-      display: -webkit-box;
-      display: -moz-box;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      word-break: break-all;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4;
-    }
-  }
-
-  p.xbug-card__sub-text {
-    position: absolute;
-    bottom: 0;
-    right: 32px;
-  }
-}
-
-.mdl-card {
   &__actions {
     /*font-size: 16px;*/
     line-height: normal;
@@ -3473,6 +3435,52 @@ input.mdl-button[type="submit"] {
     position: absolute;
     right: 16px;
     top: 16px;
+  }
+}
+
+.xbug-card {
+  &-list {
+    > .mdl-card {
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__rich-media {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: -16px;
+    > .mdl-card__media {
+      padding: 16px;
+      width: calc(~"32% - 32px");
+      img {
+        width: 100%;
+        height: 130px;
+      }
+    }
+
+    > .mdl-card__supporting-text {
+      width: calc(~"70% - 32px");
+      word-break: break-all;
+
+      .xbug-card__text-summary {
+        height: 90px;
+        display: -webkit-box;
+        display: -moz-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+      }
+    }
+
+    p.xbug-card__sub-text {
+      position: absolute;
+      bottom: 0;
+      right: 32px;
+    }
   }
 }
 
@@ -7976,13 +7984,14 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 
 .xbug-sidebar {
-
+  .social-pic {
+    width: 170px;
+    height: auto;
+  }
   > li {
     font-size: 16px;
     font-weight: 400;
-    overflow: hidden;
     z-index: 1;
-    position: relative;
     background: rgb(255, 255, 255);
     box-sizing: border-box;
     margin: 8px;

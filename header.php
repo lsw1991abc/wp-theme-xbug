@@ -2,7 +2,7 @@
 /**
  * 头部模块
  */
-$templateDirUri = esc_url(get_template_directory_uri());
+$templateDirUri = esc_url( get_template_directory_uri() );
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -10,11 +10,11 @@ $templateDirUri = esc_url(get_template_directory_uri());
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link href="<?php echo $templateDirUri; ?>/static/font-awesome-4.7.0/css/font-awesome.min.css"
-        rel="stylesheet"/>
-  <link href="<?php echo $templateDirUri; ?>/style.css" rel="stylesheet"/>
+        rel="stylesheet" />
+  <link href="<?php echo $templateDirUri; ?>/style.css" rel="stylesheet" />
   <link rel="profile" href="#">
-  <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-  <link rel="icon" href="<?php echo $templateDirUri ?>/images/xbug.ico"/>
+  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+  <link rel="icon" href="<?php echo $templateDirUri ?>/images/xbug.ico" />
   <!--[if lt IE 9]>
   <script src="<?php echo $templateDirUri ?>/static/html5.js"></script>
   <![endif]-->
@@ -49,34 +49,26 @@ $templateDirUri = esc_url(get_template_directory_uri());
           ctrxJTeBxK4pUQm0P/eNGFq9Vow1LA8V46vi4p+PD8jCaEYWzr8j86ceF/kTjSI/vE4UL3RTikcNV5yRhXMvi2vHb
           guMJz68Tyw7vLYiuPfgw9s8CXnw1csybCRfOS37HuuQ4w/Uh4rJrc9LMZXz0MgFKSY+k3PZO+Rc5vbA2HPkHrm855
           GKwJOQ+PbJhkphoDnZMBqvDxUTG1tXFS5ODMpi0Vb7FIr5mbFibrh79vOahlKR7Ik3LHu/uSK4O736zv9zvojhZVV
-          SS97IIossssgiu1XsXxBOakejtTSAAAAAAElFTkSuQmCC"/>
+          SS97IIossssgiu1XsXxBOakejtTSAAAAAAElFTkSuQmCC" />
         </a>
       </h1>
       <div class="mdl-layout-spacer"></div>
       <?php get_search_form(); ?>
-      <?php wp_nav_menu(array(
-          'theme_location' => 'header_menu',
-          'container' => 'nav',
-          'container_class' => 'xbug-navigation'
-      )); ?>
+      <?php wp_nav_menu( array(
+        'theme_location'  => 'header_menu',
+        'container'       => 'nav',
+        'container_class' => 'xbug-navigation'
+      ) ); ?>
     </div>
     <div class="mdl-layout__drawer-button">
       <i class="fa fa-bars"></i>
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <?php wp_nav_menu(array(
-        'theme_location' => 'drawer_menu',
-        'container' => 'nav',
-        'container_class' => 'xbug-navigation'
-    )); ?>
-    <!--<nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="#">文章归档</a>
-      <a class="mdl-navigation__link" href="#">下载仓库</a>
-      <a class="mdl-navigation__link" href="#">推荐图书</a>
-      <a class="mdl-navigation__link" href="#">友情链接</a>
-      <a class="mdl-navigation__link" href="#">留言板</a>
-      <a class="mdl-navigation__link" href="#">关于我</a>
-    </nav>-->
+    <?php wp_nav_menu( array(
+      'theme_location'  => 'drawer_menu',
+      'container'       => 'nav',
+      'container_class' => 'xbug-navigation'
+    ) ); ?>
   </div>
   <main class="mdl-layout__content nicescroll">
