@@ -52,7 +52,7 @@ function get_sidebar_page() {
 }
 
 function xbug_comment_list($comment, $args, $depth) {
-  echo '<li class="xbug-comment-item">
+  echo '<li id="comment-' . get_comment_ID() . '" class="xbug-comment-item">
   <div>
     <div class="comment-avatar">' . get_avatar($comment->comment_author_email, $size = '64') . '</div>
     <div class="comment">

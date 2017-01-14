@@ -68,8 +68,8 @@ class Xbug_Widget_Recent_Comments extends WP_Widget {
 
       foreach ( (array) $comments as $comment ) {
         $output .= '<li class="recentcomments">';
-        $output .= sprintf( __( '%1$s  %2$s'),
-            '<span class="comment-author-link">' . get_avatar($comment->comment_author_email, $size = '16') . '</span>',
+        $output .= sprintf( __( '%1$s   %2$s'),
+            '<span class="comment-author-link">' . get_avatar($comment->comment_author_email, $size = '32') . '</span>',
             '<a href="' . esc_url( get_comment_link( $comment ) ) . '">' . $comment->comment_content . '</a>'
         );
         $output .= '</li>';
