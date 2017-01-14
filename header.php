@@ -9,8 +9,6 @@ $templateDirUri = esc_url( get_template_directory_uri() );
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link href="<?php echo $templateDirUri; ?>/static/font-awesome-4.7.0/css/font-awesome.min.css"
-        rel="stylesheet" />
   <link href="<?php echo $templateDirUri; ?>/style.css" rel="stylesheet" />
   <link rel="profile" href="#">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">

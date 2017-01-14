@@ -32,7 +32,7 @@ $templateDirUri = esc_url(get_template_directory_uri());
     <ul class="mdl-mini-footer--link-list">
       <li>Copyright &copy; 2010-2016 xBug All rights reserved.</li>
       <li>Powered by <a href="http://wordpress.org/" target="_blank">WordPress</a>.</li>
-      <li>Theme by <a href="http://xbug.lol/">xBug</a>.</li>
+      <li>Theme by <a href="http://theme.xbug.lol/" target="_blank" title="笑谈xBug">xBug</a>.</li>
     </ul>
   </div>
   <div class="mdl-mini-footer--right-section">

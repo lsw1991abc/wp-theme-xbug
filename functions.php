@@ -93,9 +93,16 @@ function xbug_get_thumbnail_src() {
     if (!empty($post_thumbnail_src)) {
       return $post_thumbnail_src[0];
     }
+
     // 如果日志中没有图片，则显示随机图片
-    return esc_url( get_template_directory_uri() ) . '/images/pic/' . mt_rand(1, 10) . '.jpg';
+    return esc_url(get_template_directory_uri()) . '/images/pic/' . mt_rand(1, 10) . '.jpg';
   }
 }
+
+
+add_action('widgets_init', function () {
+  require_once('widget/xbug-widget-recent-comments.php');
+});
+
 
 ?>
