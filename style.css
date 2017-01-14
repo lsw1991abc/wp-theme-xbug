@@ -6822,6 +6822,9 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 .xbug-sidebar > li > ul {
   padding: 5px 8px;
 }
+.xbug-sidebar > li > ul:after {
+  clear: both;
+}
 .xbug-sidebar > li > ul li {
   word-break: keep-all;
   white-space: nowrap;
@@ -6845,6 +6848,13 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 .xbug-sidebar-page li:first-of-type {
   border-top: none;
+}
+.xbug-sidebar > li.widget_categories > ul {
+  display: table;
+}
+.xbug-sidebar > li.widget_categories > ul > li {
+  float: left;
+  width: 50%;
 }
 nav.navigation.pagination {
   color: #263238;

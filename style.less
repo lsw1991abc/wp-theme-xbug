@@ -8011,6 +8011,9 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
     }
     > ul {
       padding: 5px 8px;
+      &:after {
+        clear: both;
+      }
       li {
         word-break: keep-all;
         white-space: nowrap;
@@ -8037,6 +8040,16 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 
       &:first-of-type {
         border-top: none;
+      }
+    }
+  }
+
+  > li.widget_categories {
+    > ul {
+      display: table;
+      > li {
+        float: left;
+        width: 50%;
       }
     }
   }
@@ -8139,6 +8152,7 @@ nav {
     }
   }
 }
+
 .xbug-comment-form {
   > .mdl-textfield {
     display: block;
