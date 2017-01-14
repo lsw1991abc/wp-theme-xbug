@@ -23,10 +23,7 @@ Text Domain: http://xbug.lol/
 
 @xbug-label-background-color: #26c6da;
 
-@font-face {
-  font-family: "Roboto";
-  src: url('./font/Roboto-Light.ttf') format('truetype');
-}
+@xbug-font-size: 14px;
 
 * {
   padding: 0;
@@ -34,10 +31,10 @@ Text Domain: http://xbug.lol/
 }
 
 html {
-  color: @xbug-a-color-dark;
-  font-size: 1em;
   line-height: 1.4;
-  font-family: "Roboto", "Microsoft YaHei", "Helvetica", "Arial", sans-serif;
+  font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: @xbug-font-size/1.5;
+  color: @xbug-a-color-dark;
   width: 100%;
   height: 100%;
   -ms-touch-action: manipulation;
@@ -342,7 +339,6 @@ h6 {
 }
 
 p {
-  font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0;
@@ -456,6 +452,7 @@ ul {
   font-size: 34px;
   font-weight: 400;
   line-height: 40px;
+  word-break: break-all;
 }
 
 .mdl-typography--display-1-color-contrast {
@@ -8000,11 +7997,16 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
     }
 
     > .widgettitle {
-      padding: 5px 8px;
+      padding: 0 8px;
       margin: 0;
       line-height: 32px;
-      font-size: 22px;
+      font-size: 18px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      &:before {
+        font-family: FontAwesome;
+        padding-right: 5px;
+        content: "\f0c9";
+      }
     }
     > div {
       padding: 5px 8px;

@@ -12,7 +12,7 @@ $templateDirUri = esc_url(get_template_directory_uri());
     </h4>
   </div>
   <div class="xbug-card__rich-media">
-    <div class="mdl-card__media">
+    <div class="mdl-card__media xbug-media__width-max">
       <a href="<?php the_permalink(); ?>" target="_blank">
         <img src="<?php echo xbug_get_thumbnail_src(); ?>" alt="<?php the_title(); ?>"
              title="<?php the_title(); ?>"
