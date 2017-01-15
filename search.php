@@ -10,9 +10,9 @@ get_header();
       <div class="mdl-card__title">
         <?php
         if ( have_posts() ) {
-          printf( __( ' %s 的搜索结果：', 'xbug' ), '<span>' . get_search_query() . '</span>' );
+          printf( __( ' %s 的搜索结果：', 'xBug' ), '<span>' . get_search_query() . '</span>' );
         } else {
-          printf( __( '未找到 %s 相关的信息', 'xbug' ), '<span>' . get_search_query() . '</span>' );
+          printf( __( '未找到 %s 相关的信息', 'xBug' ), '<span>' . get_search_query() . '</span>' );
         }
         ?>
       </div>

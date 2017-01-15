@@ -4,7 +4,7 @@
  */
 $templateDirUri = esc_url(get_template_directory_uri());
 ?>
-<div id="post-<?php the_ID(); ?>" class="mdl-cell mdl-cell--12-col mdl-card">
+<div id="post-<?php the_ID(); ?>" <?php post_class($class= 'mdl-cell mdl-cell--12-col mdl-card'); ?>>
   <div class="mdl-card__title">
     <h4 class="mdl-card__title-text">
       <?php
@@ -29,7 +29,7 @@ $templateDirUri = esc_url(get_template_directory_uri());
       </p>
       <p class="mdl-typography--text-right">
         <i class="fa fa-clock-o fa-lg"></i> <?php the_date(); ?> &nbsp;&nbsp;&nbsp;
-        <i class="fa fa-commenting-o fa-lg"></i> <?php comments_number(); ?> &nbsp;&nbsp;&nbsp;
+        <i class="fa fa-commenting-o fa-lg"></i> <a href="<?php the_permalink(); ?>#comments" target="_blank"><?php comments_number(); ?></a> &nbsp;&nbsp;&nbsp;
         <a href="<?php the_permalink(); ?>" target="_blank">阅读全文</a>
       </p>
     </div>

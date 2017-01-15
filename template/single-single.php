@@ -10,13 +10,21 @@
   <div class="mdl-typography--font-light">
     <i class="fa fa-folder-open-o fa-lg"></i> <?php the_category(', '); ?>&nbsp;&nbsp;&nbsp;
     <?php the_tags($before = '<i class="fa fa-tags fa-lg"></i> ') ?>&nbsp;&nbsp;&nbsp;
-    <i class="fa fa-commenting-o fa-lg"></i> <?php comments_number(); ?>&nbsp;&nbsp;&nbsp;
+    <i class="fa fa-commenting-o fa-lg"></i> <a href="#comments"><?php comments_number(); ?></a>&nbsp;&nbsp;&nbsp;
     <i class="fa fa-clock-o fa-lg"></i> <?php echo get_the_date() . ' ' . get_the_time(); ?>&nbsp;&nbsp;&nbsp;
     <?php edit_post_link('[编辑]'); ?>
   </div>
   <hr />
   <div class="xbug-article-block__content">
-      <?php the_content(); ?>
+      <?php
+      the_content();
+      wp_link_pages( array(
+          'before'      => '<div class="page-links">' . __( '页码:', 'xBug' ),
+          'after'       => '</div>',
+          'link_before' => '<span class="page-number">',
+          'link_after'  => '</span>',
+      ) );
+      ?>
   </div>
   <div class="mdl-typography--subhead-color-contrast xbug-article-block__copyright">
     <b>版权保护:</b> 转载请保留链接: <a href="<?php echo get_the_permalink(); ?>" title="<?php the_title() ?>"><?php echo get_the_permalink(); ?></a>
@@ -55,7 +63,7 @@
   </div>
 </div>
 <div class="xbug-article-block">
-  <div class="mdl-typography--subhead-color-contrast">
+  <div id="comments" class="mdl-typography--subhead-color-contrast">
     <?php
     if (comments_open() || get_comments_number()) :
       comments_template();

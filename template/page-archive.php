@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: 文章归档2
+ * Template Name: 文章归档
  */
 get_header();
 ?>

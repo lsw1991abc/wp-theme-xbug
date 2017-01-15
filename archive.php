@@ -12,7 +12,7 @@ get_header();
         if ( have_posts() ) {
           the_archive_title( '<h4 class="mdl-card__title-text">', '</h4>' );
         } else {
-          printf( __( ' %s 目录下没有信息', 'xbug' ), get_the_archive_title() );
+          printf( __( ' %s 目录下没有信息', 'xBug' ), get_the_archive_title() );
         }
         ?>
       </div>

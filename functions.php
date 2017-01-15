@@ -30,11 +30,28 @@ function xbug_excerpt_more($more) {
 
 add_filter('excerpt_more', 'xbug_excerpt_more', '阅读全文');
 
+function xbug_content_width() {
+  $content_width = 1120;
+  $GLOBALS['content_width'] = apply_filters('xbug_content_width', $content_width);
+}
+
+add_action('after_setup_theme', 'xbug_content_width', 0);
+
+function xbug_scripts() {
+  wp_enqueue_script('jquery-scrollto', get_theme_file_uri('/static/jquery/jquery.scrollTo.js'), array('jquery'), '2.1.2', true);
+
+  if (is_singular() && comments_open() && get_option('thread_comments')) {
+    wp_enqueue_script('comment-reply');
+  }
+}
+
+add_action('wp_enqueue_scripts', 'xbug_scripts');
+
 register_nav_menus(array(
-    'header_menu' => __('头部'),
+    'header_menu' => '头部',
   /*'pre_footer_menu' => __('副页脚'),
   'footer_menu' => __('页脚'),*/
-    'drawer_menu' => __('抽屉')
+    'drawer_menu' => '抽屉'
 ));
 
 register_sidebar(array(
@@ -74,6 +91,36 @@ function xbug_comment_list($comment, $args, $depth) {
 
 add_filter('pre_option_link_manager_enabled', '__return_true');
 
+add_theme_support('automatic-feed-links');
+add_theme_support("custom-background", array(
+    'default-image' => '',
+    'default-preset' => 'default',
+    'default-position-x' => 'left',
+    'default-position-y' => 'top',
+    'default-size' => 'auto',
+    'default-repeat' => 'repeat',
+    'default-attachment' => 'scroll',
+    'default-color' => '',
+    'wp-head-callback' => '_custom_background_cb',
+    'admin-head-callback' => '',
+    'admin-preview-callback' => '',
+));
+add_theme_support("custom-header", array(
+    'default-image' => '',
+    'random-default' => false,
+    'width' => 0,
+    'height' => 0,
+    'flex-height' => false,
+    'flex-width' => false,
+    'default-text-color' => '',
+    'header-text' => true,
+    'uploads' => true,
+    'wp-head-callback' => '',
+    'admin-head-callback' => '',
+    'admin-preview-callback' => '',
+    'video' => false,
+    'video-active-callback' => 'is_front_page',
+));
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(155, 110, true); // 305 pixels wide by 380 pixels tall, set last parameter to true for hard crop mode
 add_image_size('sm', 155, 110, true); // Set thumbnail size
@@ -99,10 +146,10 @@ function xbug_get_thumbnail_src() {
   }
 }
 
-
 add_action('widgets_init', function () {
   require_once('widget/xbug-widget-recent-comments.php');
 });
 
+add_editor_style();
 
 ?>

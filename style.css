@@ -7,7 +7,8 @@ Author URI: http://xbug.lol/
 Description: X是人生无法捉摸的未来世界，充满了不确定的因素，等待你的也许是酸，也许是苦，但你必须为你所作出的决定付出应有的代价，而你却要无怨无悔！
 Version: 0.1
 License: BSD 3-Clause License
-Tags: xbug, blog, wizard
+License URI: http://theme.xbug.lol/
+Tags: blog
 Text Domain: http://xbug.lol/
 */
 @import "static/font-awesome-4.7.0/css/font-awesome.css";
@@ -6946,4 +6947,31 @@ nav.navigation.pagination > .nav-links > .page-numbers.current {
 }
 .xbug-comment-form > .mdl-textfield#xbug-comment-content {
   width: 100%;
+}
+.wp-caption {
+  background: transparent;
+}
+.wp-caption-text {
+  background: transparent;
+}
+.sticky {
+  background: transparent;
+}
+.screen-reader-text {
+  background: transparent;
+}
+.gallery-caption {
+  background: transparent;
+}
+.bypostauthor {
+  background: transparent;
+}
+.alignright {
+  background: transparent;
+}
+.alignleft {
+  background: transparent;
+}
+.aligncenter {
+  background: transparent;
 }
