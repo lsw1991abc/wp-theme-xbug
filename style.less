@@ -1,9 +1,9 @@
 /*
 Theme Name: xBug
-Theme URI: http://xbug.lol/
+Theme URI: http://theme.xbug.lol/
 Author: Wizard(lsw1991abc@gmail.com)
 Author URI: http://xbug.lol/
-Description: description.
+Description: X是人生无法捉摸的未来世界，充满了不确定的因素，等待你的也许是酸，也许是苦，但你必须为你所作出的决定付出应有的代价，而你却要无怨无悔！
 Version: 0.1
 License: BSD 3-Clause License
 Tags: xbug, blog, wizard
@@ -11,7 +11,7 @@ Text Domain: http://xbug.lol/
 */
 
 @charset "UTF-8";
-@xbug-color-default: #37474f;
+@xbug-color-default: #333;
 @xbug-header-background-color: @xbug-color-default;
 
 @xbug-border-color-dark: #00838f;
@@ -111,6 +111,12 @@ textarea {
   &-5x {
     font-size: 5em;
   }
+}
+
+.avatar {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 
 .browserupgrade {
@@ -262,68 +268,50 @@ h1, h2, h3, h4, h5, h6, p {
   * Styles for HTML elements
   */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-  font-size: 56px;
+  font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.35;
   letter-spacing: -0.02em;
   opacity: 0.54;
-  font-size: 0.6em;
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 1.9rem;
   font-weight: 400;
-  line-height: 1.35;
-  letter-spacing: -0.02em;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  line-height: 45px;
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 1.75rem;
   font-weight: 400;
-  line-height: 48px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  line-height: 40px;
 }
 
 h3 {
-  font-size: 34px;
+  font-size: 1.6rem;
   font-weight: 400;
-  line-height: 40px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  line-height: 35px;
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 1.45rem;
   font-weight: 400;
-  line-height: 32px;
-  -moz-osx-font-smoothing: grayscale;
-  margin-top: 24px;
-  margin-bottom: 16px;
+  line-height: 30px;
 }
 
 h5 {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  margin-top: 24px;
-  margin-bottom: 16px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 30px;
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 1.15rem;
   font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.04em;
-  margin-top: 24px;
-  margin-bottom: 16px;
+  line-height: 30px;
 }
 
 p {
-  font-weight: 400;
   line-height: 24px;
   letter-spacing: 0;
   margin-bottom: 16px;
@@ -346,17 +334,15 @@ blockquote {
   font-style: italic;
   line-height: 1.35;
   letter-spacing: 0.08em;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 blockquote:before {
+  font-family: FontAwesome;
+  content: "\f10d";
   position: absolute;
-  left: -0.5em;
-  content: '“';
-}
 
-blockquote:after {
-  content: '”';
-  margin-left: -0.05em;
 }
 
 mark {
@@ -384,6 +370,10 @@ ul, ol {
 
 ul {
   list-style: none;
+}
+
+ol {
+  margin-left: 18px;
 }
 
 /**
@@ -7956,9 +7946,71 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 .xbug-article-block {
   padding: 18px;
   background: #ffffff;
-  .xbug-article-content {
+  margin-top: 15px;
+  &:first-of-type {
+    margin-top: 0;
+  }
+  &__content {
+    h6 {
+
+    }
+    h5 {
+
+    }
+    h4 {
+
+    }
+    h3 {
+
+    }
+    h2 {
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.1);
+      margin-left: -18px;
+      margin-right: -18px;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+    blockquote {
+      font-size: 1.3rem;
+    }
+    pre, code {
+
+    }
+    hr {
+      margin: 0.3rem 0;
+    }
     p {
       text-indent: 28px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+    ul {
+      margin-left: 42px;
+    }
+    ol {
+      margin-left: 58px;
+    }
+  }
+
+  &__copyright {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 18px;
+  }
+
+  &__related {
+    ul {
+      display: table;
+      width: 100%;
+    }
+    li {
+      float: left;
+      width: calc(~"50% - 15px");
+      margin-left: 15px;
     }
   }
 }
@@ -7974,7 +8026,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
     z-index: 1;
     background: rgb(255, 255, 255);
     box-sizing: border-box;
-    margin: 8px;
+    margin: 15px 8px;
     &:first-of-type {
       margin-top: 0;
     }

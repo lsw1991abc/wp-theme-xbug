@@ -9,7 +9,7 @@
   </label>
   <div class="mdl-textfield__expandable-holder">
     <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-      <input type="search" class="mdl-textfield__input" placeholder="关键字，回车键搜索" name="s" id="header-search-input" />
+      <input type="search" class="mdl-textfield__input" placeholder="关键字，回车搜索" name="s" id="header-search-input" />
     </form>
   </div>
 </div>

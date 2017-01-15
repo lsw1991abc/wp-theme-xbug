@@ -10,7 +10,7 @@ get_header();
     <div class="xbug-article-block">
       <div class="mdl-typography--display-1"><?php the_title(); ?></div>
       <hr />
-      <div class="xbug-article-content">
+      <div class="xbug-article-block__content">
         <?php
         $xbugPosts = get_posts( 'numberposts=-1&orderby=post_date&order=DESC' );
         if ( count( $xbugPosts ) > 0 ) {

@@ -8,7 +8,7 @@ get_header();
   <?php get_sidebar_page(); ?>
   <div class="mdl-cell mdl-cell--10-col">
     <div class="xbug-article-block">
-      <div class="xbug-article-content">
+      <div class="xbug-article-block__content">
         <?php
         while (have_posts()) {
           the_post();
