@@ -1,5 +1,6 @@
 # wp-theme-xbug
-本项目是自己制作的一个WordPress主题，起名为xBug。
+本项目是自己制作的一个WordPress主题，起名为xBug。  
+地址：[theme.xbug.lol](http://theme.xbug.lol)
 
 ## 开发语言说明
 1. 使用Less进行编译css
@@ -14,3 +15,7 @@
 呵呵，此LOL非League of Legends，是**Laugh Out Loud**   
 
 > X是人生无法捉摸的未来世界，充满了不确定的因素，等待你的也许是酸，也许是苦，但你必须为你所作出的决定付出应有的代价，而你却要无怨无悔！
+
+## 变更历史
+* 2017-01-15   
+  完成初版。
