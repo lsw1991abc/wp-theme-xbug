@@ -6799,6 +6799,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 .xbug-article-block__copyright {
   background: rgba(0, 0, 0, 0.1);
   padding: 18px;
+  clear: both;
 }
 .xbug-article-block__related ul {
   display: table;
