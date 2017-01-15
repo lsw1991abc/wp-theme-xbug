@@ -1,1 +1,62 @@
 @charset "UTF-8";
+@import "static/font-awesome-4.7.0/css/font-awesome.css";
+* {
+  padding: 0;
+  margin: 0;
+}
+.mceContentBody {
+  padding: 18px;
+  background: #ffffff;
+}
+.mceContentBody h6 {
+  padding-left: 15px;
+}
+.mceContentBody h5 {
+  padding-left: 15px;
+}
+.mceContentBody h4 {
+  padding-left: 15px;
+}
+.mceContentBody h3 {
+  padding-left: 15px;
+}
+.mceContentBody h2 {
+  padding-left: 15px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+.mceContentBody h1 {
+  padding-left: 15px;
+  background: rgba(0, 0, 0, 0.1);
+  border-left: 6px solid rgba(0, 0, 0, 0.3);
+}
+.mceContentBody blockquote {
+  font-size: 1.3rem;
+  position: relative;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+.mceContentBody blockquote:before {
+  font-family: FontAwesome;
+  content: "\f10d";
+  position: absolute;
+}
+.mceContentBody hr {
+  margin: 0.3rem 0;
+}
+.mceContentBody p {
+  text-indent: 28px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.mceContentBody ul {
+  margin-left: 42px;
+  list-style: none;
+}
+.mceContentBody ol {
+  margin-left: 58px;
+}

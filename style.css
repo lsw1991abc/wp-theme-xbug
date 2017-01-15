@@ -6758,17 +6758,26 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 .xbug-article-block:first-of-type {
   margin-top: 0;
 }
+.xbug-article-block__content h6 {
+  padding-left: 15px;
+}
+.xbug-article-block__content h5 {
+  padding-left: 15px;
+}
+.xbug-article-block__content h4 {
+  padding-left: 15px;
+}
+.xbug-article-block__content h3 {
+  padding-left: 15px;
+}
 .xbug-article-block__content h2 {
+  padding-left: 15px;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
 }
 .xbug-article-block__content h1 {
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-left: 15px;
   background: rgba(0, 0, 0, 0.1);
-  margin-left: -18px;
-  margin-right: -18px;
-  padding-left: 18px;
-  padding-right: 18px;
+  border-left: 6px solid rgba(0, 0, 0, 0.3);
 }
 .xbug-article-block__content blockquote {
   font-size: 1.3rem;
