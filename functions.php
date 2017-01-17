@@ -92,6 +92,8 @@ function xbug_comment_list($comment, $args, $depth) {
 add_filter('pre_option_link_manager_enabled', '__return_true');
 
 add_theme_support('automatic-feed-links');
+/*
+ * 暂时屏蔽背景图修改
 add_theme_support("custom-background", array(
     'default-image' => '',
     'default-preset' => 'default',
@@ -105,6 +107,7 @@ add_theme_support("custom-background", array(
     'admin-head-callback' => '',
     'admin-preview-callback' => '',
 ));
+*/
 add_theme_support("custom-header", array(
     'default-image' => '',
     'random-default' => false,
