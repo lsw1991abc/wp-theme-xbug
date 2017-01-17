@@ -28,7 +28,7 @@ $templateDirUri = esc_url(get_template_directory_uri());
         <?php echo get_the_excerpt(); ?>
       </p>
       <p class="mdl-typography--text-right">
-        <i class="fa fa-clock-o fa-lg"></i> <?php the_date(); ?> &nbsp;&nbsp;&nbsp;
+        <i class="fa fa-clock-o fa-lg"></i> <?php echo get_the_date(); ?> &nbsp;&nbsp;&nbsp;
         <i class="fa fa-commenting-o fa-lg"></i> <a href="<?php the_permalink(); ?>#comments" target="_blank"><?php comments_number(); ?></a> &nbsp;&nbsp;&nbsp;
         <a href="<?php the_permalink(); ?>" target="_blank">阅读全文</a>
       </p>
