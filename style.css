@@ -3948,15 +3948,15 @@ nav__link {
 nav__link .material-icons {
   vertical-align: middle;
 }
+.mdl-layout__header-row a {
+  color: #ffffff;
+}
 .mdl-layout__header-row nav > ul {
   display: flex;
   flex-wrap: wrap;
 }
 .mdl-layout__header-row nav > ul > li {
   line-height: 64px;
-}
-.mdl-layout__header-row nav > ul > li > a {
-  color: #ffffff;
 }
 .mdl-layout__header-row nav__link {
   color: #424242;
@@ -6739,6 +6739,10 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
   .mdl-grid.mdl-grid--no-spacing > .mdl-cell--11-offset-desktop.mdl-cell--11-offset-desktop {
     margin-left: 91.6666666667%;
   }
+}
+.xbug-layout__header-logo {
+  height: 35px;
+  width: 100px;
 }
 .xbug-pre-footer {
   background: #0e0e2a;

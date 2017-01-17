@@ -4891,15 +4891,15 @@ nav {
 }
 
 .mdl-layout__header-row {
+  a {
+    color: @xbug-a-color-light;
+  }
   nav {
     > ul {
       display: flex;
       flex-wrap: wrap;
       > li {
         line-height: 64px;
-        > a {
-          color: @xbug-a-color-light;
-        }
       }
     }
 
@@ -7926,6 +7926,16 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
   .mdl-grid.mdl-grid--no-spacing > .mdl-cell--11-offset, .mdl-grid.mdl-grid--no-spacing >
   .mdl-cell--11-offset-desktop.mdl-cell--11-offset-desktop {
     margin-left: 91.6666666667%;
+  }
+}
+
+.xbug-layout {
+  &__header {
+    &-logo {
+      height: 35px;
+      width: 100px;
+    }
+
   }
 }
 
