@@ -8251,3 +8251,40 @@ nav {
 .aligncenter {
   background: transparent;
 }
+
+// 定制个人简历
+.xbug-resume {
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+  ul {
+    font-size: 18px;
+  }
+  &-item {
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    display: table;
+
+    &__wrap {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &__title, &__content {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+
+  .mdl-layout__content {
+    .xbug-resume-item-generator(@n, @i : 1) when (@i <= @n) {
+      > .xbug-resume-item:nth-of-type(@{i}) {
+        background-image: url("./images/resume/@{i}.jpg");
+      }
+      .xbug-resume-item-generator(@n, (@i + 1));
+    }
+    .xbug-resume-item-generator(9);
+  }
+}

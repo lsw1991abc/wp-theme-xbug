@@ -6985,3 +6985,54 @@ nav.navigation.pagination > .nav-links > .page-numbers.current {
 .aligncenter {
   background: transparent;
 }
+.xbug-resume {
+  color: #ffffff;
+  font-size: 28px;
+}
+.xbug-resume ul {
+  font-size: 18px;
+}
+.xbug-resume-item {
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+  display: table;
+}
+.xbug-resume-item__wrap {
+  display: table-cell;
+  vertical-align: middle;
+}
+.xbug-resume-item__title,
+.xbug-resume-item__content {
+  width: 60%;
+  margin: 0 auto;
+}
+.xbug-resume .mdl-layout__content > .xbug-resume-item:nth-of-type(1) {
+  background-image: url("images/resume/1.jpg");
+}
+.xbug-resume .mdl-layout__content > .xbug-resume-item:nth-of-type(2) {
+  background-image: url("images/resume/2.jpg");
+}
+.xbug-resume .mdl-layout__content > .xbug-resume-item:nth-of-type(3) {
+  background-image: url("images/resume/3.jpg");
+}
+.xbug-resume .mdl-layout__content > .xbug-resume-item:nth-of-type(4) {
+  background-image: url("images/resume/4.jpg");
+}
+.xbug-resume .mdl-layout__content > .xbug-resume-item:nth-of-type(5) {
+  background-image: url("images/resume/5.jpg");
+}
+.xbug-resume .mdl-layout__content > .xbug-resume-item:nth-of-type(6) {
+  background-image: url("images/resume/6.jpg");
+}
+.xbug-resume .mdl-layout__content > .xbug-resume-item:nth-of-type(7) {
+  background-image: url("images/resume/7.jpg");
+}
+.xbug-resume .mdl-layout__content > .xbug-resume-item:nth-of-type(8) {
+  background-image: url("images/resume/8.jpg");
+}
+.xbug-resume .mdl-layout__content > .xbug-resume-item:nth-of-type(9) {
+  background-image: url("images/resume/9.jpg");
+}
