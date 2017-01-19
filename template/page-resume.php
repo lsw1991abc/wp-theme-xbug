@@ -20,22 +20,27 @@ $templateDirUri = esc_url( get_template_directory_uri() );
 <main class="mdl-layout__content">
   <div class="xbug-resume-item">
     <div class="xbug-resume-item__wrap">
-      <div class="xbug-resume-item__content">
+      <div class="xbug-resume-item__content resume-welcome">
         <p>非常感谢您百忙之中查看我的个人简历</p>
-        <p>虽以界面的方式向您展示，但我的目标职位是Java</p>
+        <p>虽以界面的方式向您展示<br />但我的目标职位是Java开发工程师</p>
       </div>
     </div>
   </div>
   <div class="xbug-resume-item">
     <div class="xbug-resume-item__wrap">
       <div class="xbug-resume-item__title">个人信息</div>
-      <div class="xbug-resume-item__content">
-        <p>李世伟</p>
-        <p>1991.09 男 本科 3年工作经验</p>
-        <p>系统架构师是我的职业目标，我会从基层脚踏实地做起</p>
-        <p>毕业院校：大连东软信息学院(专科)，沈阳工程学院(本科)</p>
-        <p>当前供职：青岛万有引利网络信息科技有限公司·技术部·Java开发工程师</p>
-        <p>17606396383 lsw1991abc@163.com</p>
+      <div class="xbug-resume-item__content" style="display: flex;">
+        <div style="margin: 30px;">
+          <img src="/images/photo.png" style="height: 200px; width: 135px;">
+        </div>
+        <div>
+          <p>姓名：李世伟</p>
+          <p>男 1991.09 本科 3年工作经验</p>
+          <p class="resume-grid-param"><span>毕业院校：</span><span>大连东软信息学院(专科)<br />沈阳工程学院(本科)</span></p>
+          <p class="resume-grid-param"><span>当前供职：</span><span>青岛万有引利网络信息科技有限公司<br />技术部 · Java开发工程师</span></p>
+          <p class="resume-grid-param"><span>联系电话：</span><span>17606396383</span></p>
+          <p class="resume-grid-param"><span>电子邮箱：</span><span><a href="mailto:lsw1991abc@163.com">lsw1991abc@163.com</a></span></p>
+        </div>
       </div>
     </div>
   </div>
@@ -43,7 +48,9 @@ $templateDirUri = esc_url( get_template_directory_uri() );
     <div class="xbug-resume-item__wrap">
       <div class="xbug-resume-item__title">理想职位</div>
       <div class="xbug-resume-item__content">
-        <p>Java开发工程师 青岛 8.5k+</p>
+        <p>希望工作地点在青岛，能接受短期出差</p>
+        <p>从事Java开发相关的工作，薪资8.5k以上</p>
+        <p>系统架构师是我的职业目标，我会从基层脚踏实地做起</p>
       </div>
     </div>
   </div>
@@ -52,17 +59,21 @@ $templateDirUri = esc_url( get_template_directory_uri() );
       <div class="xbug-resume-item__title">教育经历</div>
       <div class="xbug-resume-item__content">
         <ul>
-          <li>
-            <span>logo</span>
-            <time>2010.09~2013.07</time>
-            <span>大连东软信息学院</span>
-            <span>软件技术(Java) 专科</span>
+          <li class="resume-grid-li">
+            <span class="resume-icon"><img src="/images/eduneusoft.jpg" title="大连东软信息学院" alt="大连东软信息学院" /></span>
+            <p class="resume-grid-param">
+              <span>2010.09~2013.07</span>
+              <span>大连东软信息学院</span>
+              <span>软件技术(Java) 专科</span>
+            </p>
           </li>
-          <li>
-            <span>logo</span>
-            <time>2013.09~2015.07</time>
-            <span>沈阳工程学院</span>
-            <span>软件工程(Java) 本科</span>
+          <li class="resume-grid-li">
+            <span class="resume-icon"><img src="/images/edusie.jpg" title="大连东软信息学院" alt="大连东软信息学院" /></span>
+            <div>
+              <span>2013.09~2015.07</span>
+              <span>沈阳工程学院</span>
+              <span>软件工程(Java) 本科</span>
+            </div>
           </li>
         </ul>
       </div>
@@ -74,19 +85,19 @@ $templateDirUri = esc_url( get_template_directory_uri() );
       <div class="xbug-resume-item__content">
         <ul>
           <li>
-            <span>logo</span>
+            <span class="resume-icon">logo</span>
             <time>2015.07~至今</time>
             <span>青岛巨商汇网络科技科技有限公司 · 技术部</span>
             <span>Java开发工程师</span>
           </li>
           <li>
-            <span>logo</span>
+            <span class="resume-icon">logo</span>
             <time>2014.10~2015.04</time>
             <span>东软集团股份有限公司 · 金融事业部</span>
             <span>Java开发实习生</span>
           </li>
           <li>
-            <span>logo</span>
+            <span class="resume-icon">logo</span>
             <time>2012.09~2013.06</time>
             <span>大连倚天软件股份有限公司 · 电子政务事业部</span>
             <span>Java Web开发实习生</span>

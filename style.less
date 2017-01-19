@@ -8255,26 +8255,77 @@ nav {
 // 定制个人简历
 .xbug-resume {
   color: rgb(255, 255, 255);
-  font-size: 28px;
-  ul {
-    font-size: 18px;
+  font-size: 26px;
+  a {
+    color: rgb(255, 255, 255);
+    &:hover {
+      color: #e65100;
+    }
+  }
+  ul, ol {
+    li {
+      margin-bottom: 8px;
+      font-size: 26px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  li.resume-grid-li {
+    display: flex;
+  }
+  p.resume-grid-param {
+    display: flex;
+    > span {
+      line-height: 36px;
+      &:first-of-type {
+        width: 150px;
+      }
+    }
   }
   &-item {
     background-attachment: fixed;
     background-size: 100% 100%;
     background-position: center center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: table;
+    padding-top: 20px;
+    padding-bottom:20px;
 
     &__wrap {
       display: table-cell;
       vertical-align: middle;
     }
 
-    &__title, &__content {
+    &__title {
+      width: 60%;
+      margin: 0 auto 10px;
+      font-size: 32px;
+      line-height: 32px;
+      padding: 10px 0;
+      border-bottom:2px solid rgba(0, 0, 0, 0.3);
+    }
+    &__content {
       width: 60%;
       margin: 0 auto;
+      &.resume-welcome {
+        -ms-text-align-last: center;
+        text-align-last: center;
+        > p {
+          font-size: 36px;
+          line-height:36px;
+          &:first-of-type {
+            margin-bottom: 30px;
+          }
+        }
+      }
+      span.resume-icon {
+        img {
+          height: 64px;
+          width: 64px;
+        }
+      }
     }
   }
 
