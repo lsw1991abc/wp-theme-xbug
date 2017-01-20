@@ -205,7 +205,7 @@ $templateDirUri = esc_url( get_template_directory_uri() );
       <div class="xbug-resume-item__content">
         <ol>
           <li>2012.05，参加软考取得软件设计师；</li>
-          <li>2017.07，取得C1驾驶证；</li>
+          <li>2012.07，取得C1驾驶证；</li>
           <li>专科获得两次学习优胜奖及优秀团员；</li>
           <li>本科获得一次奖学金；</li>
         </ol>
