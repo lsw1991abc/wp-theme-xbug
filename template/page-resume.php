@@ -50,6 +50,9 @@ $templateDirUri = esc_url( get_template_directory_uri() );
           </p>
           <p class="resume-grid-param">
             <span>当前供职：</span><span>青岛巨商汇网络科技有限公司<br />技术部 · Java开发工程师</span></p>
+          <p>
+            <br />学习，可以让自己变得更强，做的更好！
+          </p>
         </div>
       </div>
     </div>
