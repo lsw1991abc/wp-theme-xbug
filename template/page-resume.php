@@ -9,7 +9,7 @@ $templateDirUri = esc_url( get_template_directory_uri() );
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <title>xxx</title>
+  <title>李世伟的个人简历</title>
   <link href="<?php echo $templateDirUri; ?>/style.css" rel="stylesheet" />
   <link rel="icon" href="<?php echo $templateDirUri ?>/images/xbug.ico" />
   <!--[if lt IE 9]>
