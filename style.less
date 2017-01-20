@@ -8255,7 +8255,6 @@ nav {
 // 定制个人简历
 .xbug-resume {
   color: rgb(255, 255, 255);
-  font-size: 26px;
   a {
     color: rgb(255, 255, 255);
     &:hover {
@@ -8264,23 +8263,73 @@ nav {
   }
   ul, ol {
     li {
-      margin-bottom: 8px;
-      font-size: 26px;
+      margin-bottom: 16px;
+      font-size: 22px;
       &:last-of-type {
         margin-bottom: 0;
       }
     }
-  }
-  li.resume-grid-li {
-    display: flex;
-  }
-  p.resume-grid-param {
-    display: flex;
-    > span {
-      line-height: 36px;
-      &:first-of-type {
-        width: 150px;
+    @media screen and (max-width: 479px) {
+    }
+    @media screen and (min-width: 480px) and (max-width: 839px) {
+    }
+    @media screen and (min-width: 840px) {
+      &.resume-grid {
+        > li {
+          display: flex;
+        }
       }
+    }
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 34px;
+
+  }
+  h3 {
+    small {
+      color: rgb(255, 255, 255);
+      opacity: 1;
+    }
+  }
+
+  span {
+    display: block;
+    &.resume-icon {
+      margin-right: 10px;
+      background: rgb(255, 255, 255);
+      height: 80px;
+      width: 80px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .resume-grid-param {
+    display: flex;
+  }
+  .with-icon {
+    span {
+      line-height: 64px;
+      margin-left: 10px;
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+    div {
+      line-height: 32px;
+    }
+  }
+  &__job-item {
+    margin-top: 18px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    > div {
+      font-size: 16px;
+      margin-left: 30px;
     }
   }
   &-item {
@@ -8290,41 +8339,67 @@ nav {
     min-height: 100vh;
     width: 100%;
     display: table;
-    padding-top: 20px;
-    padding-bottom:20px;
+    padding: 30px 0;
 
     &__wrap {
       display: table-cell;
       vertical-align: middle;
     }
-
+    @media screen and (max-width: 479px) {
+      &__title {
+        width: 80%;
+      }
+      &__content {
+        width: 80%;
+        &.resume-profile {
+          small, label {
+            display: inline-block;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 480px) and (max-width: 839px) {
+      &__title {
+        width: 80%;
+      }
+      &__content {
+        width: 80%;
+      }
+    }
+    @media screen and (min-width: 840px) {
+      &__title {
+        width: 60%;
+      }
+      &__content {
+        width: 60%;
+        &.resume-profile {
+          display: flex;
+        }
+      }
+    }
     &__title {
-      width: 60%;
       margin: 0 auto 10px;
       font-size: 32px;
       line-height: 32px;
       padding: 10px 0;
-      border-bottom:2px solid rgba(0, 0, 0, 0.3);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
     }
     &__content {
-      width: 60%;
       margin: 0 auto;
       &.resume-welcome {
         -ms-text-align-last: center;
         text-align-last: center;
-        > p {
-          font-size: 36px;
-          line-height:36px;
-          &:first-of-type {
-            margin-bottom: 30px;
-          }
-        }
       }
-      span.resume-icon {
-        img {
-          height: 64px;
-          width: 64px;
-        }
+    }
+    &:last-of-type {
+      .xbug-resume-item__content:after {
+        margin-top: 50px;
+        padding: 10px;
+        content: '最后，谢谢您查看我的简历...';
+        display: block;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+        border-top: 2px dashed rgba(255, 255, 255, 0.7);
       }
     }
   }
@@ -8332,7 +8407,7 @@ nav {
   .mdl-layout__content {
     .xbug-resume-item-generator(@n, @i : 1) when (@i <= @n) {
       > .xbug-resume-item:nth-of-type(@{i}) {
-        background-image: url("./images/resume/@{i}.jpg");
+        background-image: linear-gradient(to top, rgba(43, 43, 43, 0.498039), rgba(43, 43, 43, 0.498039)), url("./images/resume/@{i}.jpg");
       }
       .xbug-resume-item-generator(@n, (@i + 1));
     }
