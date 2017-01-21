@@ -99,7 +99,7 @@ $templateDirUri = esc_url( get_template_directory_uri() );
             <span class="resume-icon"><img src="/images/jsh.png" title="青岛巨商汇网络科技科技有限公司" alt="青岛巨商汇网络科技科技有限公司" /></span>
             <div class="with-icon">
               <div>2015.07~至今</div>
-              <div>青岛巨商汇网络科技科技有限公司·技术部</div>
+              <div>青岛巨商汇网络科技有限公司·技术部</div>
               <div>Java开发工程师</div>
             </div>
           </li>
