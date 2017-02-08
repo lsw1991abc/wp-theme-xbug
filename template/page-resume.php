@@ -35,7 +35,7 @@ $templateDirUri = esc_url( get_template_directory_uri() );
         </div>
         <div>
           <p>李世伟&nbsp;&nbsp;
-            <small>(1991.09，男，本科，3年工作经验)</small>
+            <small>(1991.09，男，本科，2年工作经验)</small>
           </p>
           <p>
             <label><i class="fa fa-phone fa-lg"></i> 17606396383</label>&nbsp;&nbsp;
@@ -96,7 +96,7 @@ $templateDirUri = esc_url( get_template_directory_uri() );
       <div class="xbug-resume-item__content">
         <ul class="resume-grid">
           <li>
-            <span class="resume-icon"><img src="/images/jsh.png" title="青岛巨商汇网络科技科技有限公司" alt="青岛巨商汇网络科技科技有限公司" /></span>
+            <span class="resume-icon"><img src="/images/jsh.png" title="青岛巨商汇网络科技有限公司" alt="青岛巨商汇网络科技有限公司" /></span>
             <div class="with-icon">
               <div>2015.07~至今</div>
               <div>青岛巨商汇网络科技有限公司·技术部</div>
@@ -216,7 +216,7 @@ $templateDirUri = esc_url( get_template_directory_uri() );
     <div class="xbug-resume-item__wrap">
       <div class="xbug-resume-item__title">自我评价</div>
       <div class="xbug-resume-item__content" style="text-indent: 48px;">
-        <p>从大学选择软件工程专业，到现在的工作。一直在Java的学习和使用中。大学期间，参加软考，获得了软件设计师资格证书，并且在创业公司和上市集团公司实习过一年半时间。毕业之后，进入海尔的小薇公司，已有一年半多时间。进一步学习了Java相关技术。能够使用Spring Boot、Dubbo、MySQL、MyBatis等开源框架进行开发。我的职业目标是系统架构师，并正在努力着。</p>
+        <p>从大学选择软件工程专业，到现在的工作。一直在Java的学习和使用中。大学期间，参加软考，获得了软件设计师资格证书，并且在创业公司和上市集团公司实习过一年半时间。毕业之后，进入海尔的小微公司，已有一年半多时间。进一步学习了Java相关技术。能够使用Spring Boot、Dubbo、MySQL、MyBatis等开源框架进行开发。我的职业目标是系统架构师，并正在努力着。</p>
       </div>
     </div>
   </div>
