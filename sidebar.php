@@ -4,7 +4,7 @@
  */
 ?>
 <ul class="mdl-cell mdl-cell--3-col xbug-card-list xbug-sidebar">
-  <li class="widget">
+  <li id="profile-links" class="widget">
     <ul class="mdl-card__actions">
       <li>
         <a id="social-wechat"><i class="icon fa fa-wechat fa-2x mdl-color-text--green"></i></a>

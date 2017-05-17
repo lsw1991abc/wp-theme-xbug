@@ -7,7 +7,7 @@
   <div class="mdl-typography--display-1">
       <?php the_title(); ?>
   </div>
-  <div class="mdl-typography--font-thin mdl-color-text--grey-600">
+  <div class="mdl-typography--font-thin mdl-color-text--grey-500">
     <i class="fa fa-folder-open-o fa-lg"></i> <?php the_category(', '); ?>&nbsp;&nbsp;&nbsp;
     <?php the_tags($before = '<i class="fa fa-tags fa-lg"></i> ') ?>&nbsp;&nbsp;&nbsp;
     <i class="fa fa-commenting-o fa-lg"></i> <a href="#comments"><?php comments_number(); ?></a>&nbsp;&nbsp;&nbsp;

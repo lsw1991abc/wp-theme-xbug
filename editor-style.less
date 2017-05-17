@@ -1,5 +1,14 @@
 @charset "UTF-8";
 @import "static/font-awesome-4.7.0/css/font-awesome.css";
+
+@xbug-color-blue: rgba(33, 150, 243, 1);
+@xbug-color-grey: rgb(204, 204, 204);
+
+@font-face {
+  font-family: 'xbug-regular';
+  src: url('./fonts/NotoSansCJK-Regular.otf');
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,42 +16,56 @@
 .mceContentBody {
   padding: 18px;
   background: #ffffff;
+
+  font-family: "xbug-regular", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   h6 {
-    padding-left: 15px;
+    color: @xbug-color-blue;
+    &::before {
+      content: '####### ';
+    }
   }
   h5 {
-    padding-left: 15px;
+    color: @xbug-color-blue;
+    &::before {
+      content: '###### ';
+    }
   }
   h4 {
-    padding-left: 15px;
+    color: @xbug-color-blue;
+    &::before {
+      content: '#### ';
+    }
   }
   h3 {
-    padding-left: 15px;
+    color: @xbug-color-blue;
+    &::before {
+      content: '### ';
+    }
   }
   h2 {
-    padding-left: 15px;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    color: @xbug-color-blue;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+
+    &::before {
+      content: '## ';
+    }
   }
   h1 {
-    padding-left: 15px;
-    background: rgba(0, 0, 0, 0.1);
-    border-left: 6px solid rgba(0, 0, 0, 0.3);
+    color: @xbug-color-blue;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+
+    &::before {
+      content: '# ';
+    }
   }
   blockquote {
-    font-size: 1.3rem;
-    position: relative;
-    font-weight: 300;
-    font-style: italic;
+    font-size: 1.1rem;
     line-height: 1.35;
     letter-spacing: 0.08em;
-    padding: 8px;
-    background: rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
-    &:before {
-      font-family: FontAwesome;
-      content: "\f10d";
-      position: absolute;
-    }
+    padding: 3px 8px;
+    border: 1px dashed @xbug-color-blue;
+    background-color: lighten(@xbug-color-blue, 43%);
   }
 
   pre, code {
@@ -52,7 +75,6 @@
     margin: 0.3rem 0;
   }
   p {
-    text-indent: 28px;
     margin-top: 8px;
     margin-bottom: 8px;
   }
@@ -62,5 +84,13 @@
   }
   ol {
     margin-left: 58px;
+  }
+  table {
+    width: 100%;
+    border: 1px solid lighten(@xbug-color-grey, 10%);
+    margin-bottom: 8px;
+    th {
+      background-color: lighten(@xbug-color-grey, 10%);
+    }
   }
 }

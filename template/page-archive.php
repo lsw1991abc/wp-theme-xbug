@@ -21,21 +21,21 @@ get_header();
             setup_postdata( $post );
             $year  = get_the_date( 'Y' );
             $month = get_the_date( 'n' );
-            $day   = get_the_date( 'j' );
+            $day   = get_the_date( 'd' );
             if ( $year != $prev_year || $month != $prev_month ) {
               if ( $not_first ) {
                 echo '</ul></div>';
               }
-              echo '<div><h3>' . get_the_date( 'F Y' ) . '</h3>' . '<ul>';
+              echo '<div><h1>' . get_the_date( 'Y-m' ) . '</h1>' . '<ul>';
               $not_first = true;
             }
             $prev_year  = $year;
             $prev_month = $month;
             ?>
             <li>
-              <time><?php echo $day; ?>日</time>
+              <time><?php echo $day; ?>日 - </time>
               <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-              <span class="muted"><?php comments_number( '', '1评论', '%评论' ); ?></span>
+              <span class="muted"><?php comments_number( '', ' [ 1评论 ]', ' [ %评论 ]' ); ?></span>
             </li>
             <?php
           }

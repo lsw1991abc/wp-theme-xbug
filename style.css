@@ -12,6 +12,10 @@ Tags: blog
 Text Domain: http://xbug.lol/
 */
 @import "static/font-awesome-4.7.0/css/font-awesome.css";
+@font-face {
+  font-family: 'xbug-regular';
+  src: url('fonts/NotoSansCJK-Regular.otf');
+}
 * {
   padding: 0;
   margin: 0;
@@ -21,7 +25,7 @@ Text Domain: http://xbug.lol/
 }
 html {
   line-height: 1.4;
-  font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "xbug-regular", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #263238;
   width: 100%;
@@ -171,10 +175,6 @@ textarea {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-  /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
   thead {
     display: table-header-group;
   }
@@ -242,34 +242,34 @@ h6 small {
   opacity: 0.54;
 }
 h1 {
-  font-size: 1.9rem;
-  font-weight: 400;
-  line-height: 45px;
-}
-h2 {
-  font-size: 1.75rem;
-  font-weight: 400;
-  line-height: 40px;
-}
-h3 {
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 35px;
-}
-h4 {
-  font-size: 1.45rem;
-  font-weight: 400;
-  line-height: 30px;
-}
-h5 {
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 30px;
 }
-h6 {
+h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 25px;
+}
+h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 20px;
+}
+h4 {
   font-size: 1.15rem;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 20px;
+}
+h5 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 20px;
+}
+h6 {
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 20px;
 }
 p {
   line-height: 24px;
@@ -286,18 +286,12 @@ a:hover {
 }
 blockquote {
   position: relative;
-  font-size: 24px;
-  font-weight: 300;
-  font-style: italic;
+  font-size: 1.1rem;
   line-height: 1.35;
   letter-spacing: 0.08em;
-  padding: 8px;
-  background: rgba(0, 0, 0, 0.1);
-}
-blockquote:before {
-  font-family: FontAwesome;
-  content: "\f10d";
-  position: absolute;
+  padding: 3px 8px;
+  border: 1px dashed #2196f3;
+  background-color: #f1f8fe;
 }
 mark {
   background-color: #f4ff81;
@@ -366,13 +360,13 @@ ol {
   opacity: 0.54;
 }
 .mdl-typography--display-1 {
-  font-size: 34px;
+  font-size: 1.6rem;
   font-weight: 400;
-  line-height: 40px;
+  line-height: 35px;
   word-break: break-all;
 }
 .mdl-typography--display-1-color-contrast {
-  font-size: 34px;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 40px;
   opacity: 0.54;
@@ -2124,6 +2118,12 @@ ol {
 .mdl-color-text--grey-500 {
   color: #9e9e9e !important;
 }
+.mdl-color-text--grey-500 a {
+  color: #9e9e9e !important;
+}
+.mdl-color-text--grey-500 a:hover {
+  color: #e65100 !important;
+}
 .mdl-color--grey-500 {
   background-color: #9e9e9e !important;
 }
@@ -2676,6 +2676,11 @@ input.mdl-button[type="submit"] {
   position: absolute;
   right: 16px;
   top: 16px;
+}
+.xbug-card-list > .mdl-card {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100% !important;
 }
 .xbug-card-list > .mdl-card:first-of-type {
   margin-top: 0;
@@ -3310,7 +3315,10 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   justify-content: space-between;
   padding: 32px 16px;
   color: #9e9e9e;
-  background: url("images/footer-bg.png") no-repeat center center #15143d;
+  background: #323a45;
+}
+.mdl-mini-footer a:hover {
+  color: #ffffff;
 }
 .mdl-mini-footer:after {
   content: '';
@@ -3971,6 +3979,9 @@ nav__link .material-icons {
 .mdl-layout__header-row nav__link .material-icons {
   vertical-align: middle;
 }
+.mdl-layout__header-row h1 {
+  font-size: 1.6rem;
+}
 .mdl-layout {
   width: 100%;
   height: 100%;
@@ -4161,7 +4172,7 @@ nav__link .material-icons {
   min-height: 64px;
   max-height: 1000px;
   z-index: 3;
-  background: #15143d;
+  background: #323a45;
   color: #ffffff;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   transition-duration: 0.2s;
@@ -6745,60 +6756,86 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
   width: 100px;
 }
 .xbug-pre-footer {
-  background: #0e0e2a;
+  background: #272e36;
 }
 .xbug-pre-footer a {
   color: #ffffff;
 }
 .xbug-article-block {
-  padding: 18px;
+  padding: 10px;
   background: #ffffff;
-  margin-top: 15px;
+  margin-top: 8px;
+  overflow: hidden;
 }
 .xbug-article-block:first-of-type {
   margin-top: 0;
 }
 .xbug-article-block__content h6 {
-  padding-left: 15px;
+  color: #2196f3;
+}
+.xbug-article-block__content h6::before {
+  content: '####### ';
 }
 .xbug-article-block__content h5 {
-  padding-left: 15px;
+  color: #2196f3;
+}
+.xbug-article-block__content h5::before {
+  content: '###### ';
 }
 .xbug-article-block__content h4 {
-  padding-left: 15px;
+  color: #2196f3;
+}
+.xbug-article-block__content h4::before {
+  content: '#### ';
 }
 .xbug-article-block__content h3 {
-  padding-left: 15px;
+  color: #2196f3;
+}
+.xbug-article-block__content h3::before {
+  content: '### ';
 }
 .xbug-article-block__content h2 {
-  padding-left: 15px;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  color: #2196f3;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+.xbug-article-block__content h2::before {
+  content: '## ';
 }
 .xbug-article-block__content h1 {
-  padding-left: 15px;
-  background: rgba(0, 0, 0, 0.1);
-  border-left: 6px solid rgba(0, 0, 0, 0.3);
+  color: #2196f3;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
-.xbug-article-block__content blockquote {
-  font-size: 1.3rem;
+.xbug-article-block__content h1::before {
+  content: '# ';
 }
 .xbug-article-block__content hr {
   margin: 0.3rem 0;
 }
 .xbug-article-block__content p {
-  text-indent: 28px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 .xbug-article-block__content ul {
-  margin-left: 42px;
+  margin-left: 28px;
 }
 .xbug-article-block__content ol {
-  margin-left: 58px;
+  margin-left: 28px;
+}
+.xbug-article-block__content img {
+  border: 1px solid #cccccc;
+  max-width: 100%;
+}
+.xbug-article-block__content table {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 8px;
+}
+.xbug-article-block__content table th {
+  background-color: #e6e6e6;
 }
 .xbug-article-block__copyright {
   background: rgba(0, 0, 0, 0.1);
-  padding: 18px;
+  padding: 8px 18px;
   clear: both;
 }
 .xbug-article-block__related ul {
@@ -6820,10 +6857,13 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
   z-index: 1;
   background: #ffffff;
   box-sizing: border-box;
-  margin: 15px 8px;
+  margin: 8px 0;
 }
 .xbug-sidebar > li:first-of-type {
   margin-top: 0;
+}
+.xbug-sidebar > li#profile-links {
+  padding: 8px;
 }
 .xbug-sidebar > li.widget_categories > ul {
   display: table;
@@ -6833,20 +6873,25 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
   width: 50%;
 }
 .xbug-sidebar > li.widget_recent_comments li {
-  height: 46px;
-  line-height: 46px;
+  height: 45px;
+  line-height: 45px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 .xbug-sidebar > li.widget_recent_comments li:first-of-type {
   border-top: none;
 }
 .xbug-sidebar > li.widget_recent_entries li {
-  height: 46px;
-  line-height: 46px;
+  height: 40px;
+  line-height: 40px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 .xbug-sidebar > li.widget_recent_entries li:first-of-type {
   border-top: none;
+}
+.xbug-sidebar > li.widget_tag_cloud a {
+  font-size: 1.1rem !important;
+  background-color: #ebebeb;
+  padding: 2px 8px;
 }
 .xbug-sidebar > li > .widgettitle {
   padding: 3px 8px;
@@ -6864,7 +6909,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
   padding: 5px 8px;
 }
 .xbug-sidebar > li > ul {
-  padding: 5px 8px;
+  padding: 0 8px;
 }
 .xbug-sidebar > li > ul:after {
   clear: both;
@@ -6893,11 +6938,20 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 .xbug-sidebar-page li:first-of-type {
   border-top: none;
 }
+@media screen and (min-width: 840px) {
+  .xbug-sidebar {
+    margin-left: 0 !important;
+    width: calc(25% - 8px) !important;
+  }
+}
 nav.navigation.pagination {
   color: #263238;
   text-align: center;
   font-size: 1.3em;
   margin: 16px;
+}
+nav.navigation.pagination > .nav-links {
+  margin: 0 auto;
 }
 nav.navigation.pagination > .nav-links > .page-numbers {
   padding: 0 8px;

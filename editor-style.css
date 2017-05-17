@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import "static/font-awesome-4.7.0/css/font-awesome.css";
+@font-face {
+  font-family: 'xbug-regular';
+  src: url('fonts/NotoSansCJK-Regular.otf');
+}
 * {
   padding: 0;
   margin: 0;
@@ -7,49 +11,58 @@
 .mceContentBody {
   padding: 18px;
   background: #ffffff;
+  font-family: "xbug-regular", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .mceContentBody h6 {
-  padding-left: 15px;
+  color: #2196f3;
+}
+.mceContentBody h6::before {
+  content: '####### ';
 }
 .mceContentBody h5 {
-  padding-left: 15px;
+  color: #2196f3;
+}
+.mceContentBody h5::before {
+  content: '###### ';
 }
 .mceContentBody h4 {
-  padding-left: 15px;
+  color: #2196f3;
+}
+.mceContentBody h4::before {
+  content: '#### ';
 }
 .mceContentBody h3 {
-  padding-left: 15px;
+  color: #2196f3;
+}
+.mceContentBody h3::before {
+  content: '### ';
 }
 .mceContentBody h2 {
-  padding-left: 15px;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  color: #2196f3;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+.mceContentBody h2::before {
+  content: '## ';
 }
 .mceContentBody h1 {
-  padding-left: 15px;
-  background: rgba(0, 0, 0, 0.1);
-  border-left: 6px solid rgba(0, 0, 0, 0.3);
+  color: #2196f3;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+.mceContentBody h1::before {
+  content: '# ';
 }
 .mceContentBody blockquote {
-  font-size: 1.3rem;
-  position: relative;
-  font-weight: 300;
-  font-style: italic;
+  font-size: 1.1rem;
   line-height: 1.35;
   letter-spacing: 0.08em;
-  padding: 8px;
-  background: rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
-}
-.mceContentBody blockquote:before {
-  font-family: FontAwesome;
-  content: "\f10d";
-  position: absolute;
+  padding: 3px 8px;
+  border: 1px dashed #2196f3;
+  background-color: #f1f8fe;
 }
 .mceContentBody hr {
   margin: 0.3rem 0;
 }
 .mceContentBody p {
-  text-indent: 28px;
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -59,4 +72,12 @@
 }
 .mceContentBody ol {
   margin-left: 58px;
+}
+.mceContentBody table {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 8px;
+}
+.mceContentBody table th {
+  background-color: #e6e6e6;
 }

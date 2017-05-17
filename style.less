@@ -12,7 +12,8 @@ Text Domain: http://xbug.lol/
 */
 
 @charset "UTF-8";
-@xbug-color-default: rgb(21, 20, 61);
+@xbug-color-default: rgb(50, 58, 69);
+@xbug-color-grey: rgb(204, 204, 204);
 @xbug-header-background-color: @xbug-color-default;
 
 @xbug-border-color-dark: #00838f;
@@ -24,8 +25,15 @@ Text Domain: http://xbug.lol/
 
 @xbug-label-background-color: #26c6da;
 
+@xbug-color-blue: rgba(33, 150, 243, 1);
+
 @xbug-font-size: 14px;
 @xbug-icon-size: 18px;
+
+@font-face {
+  font-family: 'xbug-regular';
+  src: url('./fonts/NotoSansCJK-Regular.otf');
+}
 
 * {
   padding: 0;
@@ -38,7 +46,7 @@ Text Domain: http://xbug.lol/
 
 html {
   line-height: 1.4;
-  font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "xbug-regular", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: @xbug-font-size;
   color: @xbug-a-color-dark;
   width: 100%;
@@ -218,10 +226,6 @@ textarea {
     page-break-inside: avoid;
   }
 
-  /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
   thead {
     display: table-header-group;
   }
@@ -277,39 +281,39 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 h1 {
-  font-size: 1.9rem;
-  font-weight: 400;
-  line-height: 45px;
-}
-
-h2 {
-  font-size: 1.75rem;
-  font-weight: 400;
-  line-height: 40px;
-}
-
-h3 {
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 35px;
-}
-
-h4 {
-  font-size: 1.45rem;
-  font-weight: 400;
-  line-height: 30px;
-}
-
-h5 {
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 30px;
 }
 
-h6 {
+h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+h4 {
   font-size: 1.15rem;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 20px;
+}
+
+h5 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+h6 {
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 p {
@@ -330,20 +334,12 @@ a {
 
 blockquote {
   position: relative;
-  font-size: 24px;
-  font-weight: 300;
-  font-style: italic;
+  font-size: 1.1rem;
   line-height: 1.35;
   letter-spacing: 0.08em;
-  padding: 8px;
-  background: rgba(0, 0, 0, 0.1);
-}
-
-blockquote:before {
-  font-family: FontAwesome;
-  content: "\f10d";
-  position: absolute;
-
+  padding: 3px 8px;
+  border: 1px dashed @xbug-color-blue;
+  background-color: lighten(@xbug-color-blue, 43%);
 }
 
 mark {
@@ -424,14 +420,14 @@ ol {
 }
 
 .mdl-typography--display-1 {
-  font-size: 34px;
+  font-size: 1.6rem;
   font-weight: 400;
-  line-height: 40px;
+  line-height: 35px;
   word-break: break-all;
 }
 
 .mdl-typography--display-1-color-contrast {
-  font-size: 34px;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 40px;
   opacity: 0.54;
@@ -2734,6 +2730,12 @@ ol {
 
 .mdl-color-text--grey-500 {
   color: rgb(158, 158, 158) !important;
+  a {
+    color: rgb(158, 158, 158) !important;
+    &:hover {
+      color: @xbug-a-color__hover !important;
+    }
+  }
 }
 
 .mdl-color--grey-500 {
@@ -3413,6 +3415,9 @@ input.mdl-button[type="submit"] {
 .xbug-card {
   &-list {
     > .mdl-card {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100% !important;
       &:first-of-type {
         margin-top: 0;
       }
@@ -3490,26 +3495,25 @@ input.mdl-button[type="submit"] {
     }
   }
 
-}
+  &__input {
+    line-height: 24px;
+  }
 
-.mdl-checkbox__input {
-  line-height: 24px;
-}
-
-.mdl-checkbox__box-outline {
-  position: absolute;
-  top: 3px;
-  left: 0;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 16px;
-  height: 16px;
-  margin: 0;
-  cursor: pointer;
-  overflow: hidden;
-  border: 2px solid rgba(0, 0, 0, 0.54);
-  border-radius: 2px;
-  z-index: 2;
+  &__box-outline {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+    border-radius: 2px;
+    z-index: 2;
+  }
 }
 
 fieldset[disabled] .mdl-checkbox .mdl-checkbox__box-outline,
@@ -4152,7 +4156,14 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple,
   justify-content: space-between;
   padding: 32px 16px;
   color: rgb(158, 158, 158);
-  background: url("images/footer-bg.png") no-repeat center center @xbug-color-default;
+  background: @xbug-color-default;
+
+  a {
+    &:hover {
+      color: @xbug-a-color-light;
+    }
+  }
+
 }
 
 .mdl-mini-footer:after {
@@ -4917,6 +4928,9 @@ nav {
         vertical-align: middle;
       }
     }
+  }
+  h1 {
+    font-size: 1.6rem;
   }
 }
 
@@ -7947,36 +7961,55 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 
 .xbug-article-block {
-  padding: 18px;
+  padding: 10px;
   background: #ffffff;
-  margin-top: 15px;
+  margin-top: 8px;
+  overflow: hidden;
   &:first-of-type {
     margin-top: 0;
   }
   &__content {
     h6 {
-      padding-left: 15px;
+      color: @xbug-color-blue;
+      &::before {
+        content: '####### ';
+      }
     }
     h5 {
-      padding-left: 15px;
+      color: @xbug-color-blue;
+      &::before {
+        content: '###### ';
+      }
     }
     h4 {
-      padding-left: 15px;
+      color: @xbug-color-blue;
+      &::before {
+        content: '#### ';
+      }
     }
     h3 {
-      padding-left: 15px;
+      color: @xbug-color-blue;
+      &::before {
+        content: '### ';
+      }
     }
     h2 {
-      padding-left: 15px;
-      border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+      color: @xbug-color-blue;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+
+      &::before {
+        content: '## ';
+      }
     }
     h1 {
-      padding-left: 15px;
-      background: rgba(0, 0, 0, 0.1);
-      border-left: 6px solid rgba(0, 0, 0, 0.3);
+      color: @xbug-color-blue;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+
+      &::before {
+        content: '# ';
+      }
     }
     blockquote {
-      font-size: 1.3rem;
     }
     pre, code {
 
@@ -7985,21 +8018,32 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
       margin: 0.3rem 0;
     }
     p {
-      text-indent: 28px;
-      margin-top: 8px;
-      margin-bottom: 8px;
+      margin-top: 5px;
+      margin-bottom: 10px;
     }
     ul {
-      margin-left: 42px;
+      margin-left: 28px;
     }
     ol {
-      margin-left: 58px;
+      margin-left: 28px;
+    }
+    img {
+      border: 1px solid @xbug-color-grey;
+      max-width: 100%;
+    }
+    table {
+      width: 100%;
+      border: 1px solid lighten(@xbug-color-grey, 10%);
+      margin-bottom: 8px;
+      th {
+        background-color: lighten(@xbug-color-grey, 10%);
+      }
     }
   }
 
   &__copyright {
     background: rgba(0, 0, 0, 0.1);
-    padding: 18px;
+    padding: 8px 18px;
     clear: both;
   }
 
@@ -8027,9 +8071,13 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
     z-index: 1;
     background: rgb(255, 255, 255);
     box-sizing: border-box;
-    margin: 15px 8px;
+    margin: 8px 0;
     &:first-of-type {
       margin-top: 0;
+    }
+
+    &#profile-links {
+      padding: 8px;
     }
 
     &.widget_categories {
@@ -8044,8 +8092,8 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 
     &.widget_recent_comments {
       li {
-        height: 46px;
-        line-height: 46px;
+        height: 45px;
+        line-height: 45px;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
 
         &:first-of-type {
@@ -8055,7 +8103,23 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
     }
 
     &.widget_recent_entries {
-      .widget_recent_comments;
+      li {
+        height: 40px;
+        line-height: 40px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+        &:first-of-type {
+          border-top: none;
+        }
+      }
+    }
+
+    &.widget_tag_cloud {
+      a {
+        font-size: 1.1rem !important;
+        background-color: lighten(@xbug-color-grey, 12%);
+        padding: 2px 8px;
+      }
     }
 
     > .widgettitle {
@@ -8074,7 +8138,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
       padding: 5px 8px;
     }
     > ul {
-      padding: 5px 8px;
+      padding: 0 8px;
       &:after {
         clear: both;
       }
@@ -8109,6 +8173,13 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
   }
 }
 
+@media screen and (min-width: 840px) {
+  .xbug-sidebar {
+    margin-left: 0 !important;
+    width: calc(~"25% - 8px") !important;
+  }
+}
+
 nav {
   &.navigation {
     &.pagination {
@@ -8118,6 +8189,7 @@ nav {
       margin: 16px;
 
       > .nav-links {
+        margin: 0 auto;
         > .page-numbers {
           padding: 0 8px;
           &.current {
