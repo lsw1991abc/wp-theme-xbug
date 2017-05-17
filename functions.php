@@ -47,6 +47,24 @@ function xbug_scripts() {
 
 add_action('wp_enqueue_scripts', 'xbug_scripts');
 
+// 过滤评论
+function scp_comment_post($incoming_comment) {
+  $pattern = '/[一-龥]/u';
+  $pattern_japan = '/[あ-んア-ン]/u';
+  $pattern_link = '/http:\/\//is';
+  if (!preg_match($pattern, $incoming_comment['comment_content'])) {
+    wp_die("Oops! You should type some Chinese word (like \"你好\") in your comment to pass the spam-check, thanks for your patience. 您的评论中必须包含汉字");
+  } else if (preg_match($pattern_japan, $incoming_comment['comment_content'])) {
+    wp_die("中国語を使用してください。不支持日文，并检查是否包含特殊字符。");
+  } else if (preg_match_all($pattern_link, $incoming_comment['comment_content'], $aa)) {
+    wp_die("评论中禁止出现2个及2个以上的网址或链接");
+  }
+
+  return ($incoming_comment);
+}
+
+add_filter('preprocess_comment', 'scp_comment_post');
+
 register_nav_menus(array(
     'header_menu' => '头部',
   /*'pre_footer_menu' => __('副页脚'),
