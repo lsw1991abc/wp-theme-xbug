@@ -8,7 +8,7 @@
   wp_page_menu(array(
       'sort_column' => 'menu_order, post_title',
       'menu_class' => 'xbug-sidebar-page',
-'exclude' => '1036,550'
+      'exclude' => '1036,550'
   ));
   ?>
 </div>
