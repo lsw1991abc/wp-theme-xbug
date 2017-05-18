@@ -9,24 +9,21 @@ $aria_req = ( $req ? " aria-required='true'" : '' );
 $html_req = ( $req ? " required='required'" : '' );
 comment_form( array(
   'fields'               => array(
-    'author' => '<p class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <input class="mdl-textfield__input" type="text" id="xbug-comment-nickname" name="author" ' . $aria_req . $html_req . ' />
-                  <label class="mdl-textfield__label" for="xbug-comment-nickname">' . ( $req ? ' <span class="required">*</span> ' : '' ) . '昵称</label>
-                  <span class="mdl-textfield__error">请输入有效昵称</span>
+    'author' => '<p class="xbug-form--item">
+                  <label for="xbug-comment-nickname">你的昵称</label>&nbsp;&nbsp;
+                  <input class="xbug-input" type="text" id="xbug-comment-nickname" name="author" placeholder="你的昵称" size="30" maxlength="100" ' . $aria_req . $html_req . ' />' . ( $req ? ' <span class="required">*</span> ' : '' ) . '
                 </p>',
-    'email'  => '<p class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <input class="mdl-textfield__input" type="email" id="xbug-comment-email" name="email" ' . $aria_req . $html_req . ' />
-                  <label class="mdl-textfield__label" for="xbug-comment-email">' . ( $req ? ' <span class="required">*</span> ' : '' ) . '电子邮件(不会被公开)</label>
-                  <span class="mdl-textfield__error">请输入有效电子邮件地址</span>
+    'email'  => '<p class="xbug-form--item">
+                  <label for="xbug-comment-email">电子邮箱</label>&nbsp;&nbsp;
+                  <input class="xbug-input" type="email" id="xbug-comment-email" name="email" placeholder="电子邮箱(不会被公开)" size="30" maxlength="100" ' . $aria_req . $html_req . ' />' . ( $req ? ' <span class="required">*</span> ' : '' ) . '
                  </p>',
-    'url'    => '<p class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <input class="mdl-textfield__input" type="url" id="xbug-comment-url" name="url" size="30" maxlength="200" />
-                  <label class="mdl-textfield__label" for="xbug-comment-url">站点 http(s)://</label>
-                  <span class="mdl-textfield__error">请输入有效站点地址</span>
+    'url'    => '<p class="xbug-form--item">
+                  <label for="xbug-comment-url">个人网站</label>&nbsp;&nbsp;
+                  <input class="xbug-input" type="url" id="xbug-comment-url" name="url" placeholder="http(s)://" size="30" maxlength="200" />
                   </p>',
   ),
   'comment_notes_before' => '',
-  'comment_field'        => '<p class="mdl-textfield mdl-js-textfield" id="xbug-comment-content"><textarea class="mdl-textfield__input" type="text" rows= "3" name="comment" maxlength="65525"></textarea><label class="mdl-textfield__label" for="xbug-comment-content">* 评论内容</label></p>',
+  'comment_field'        => '<p class="xbug-form--item" id="xbug-comment-content"><textarea class="xbug-textfield" rows= "5" cols="100" name="comment" maxlength="1000"></textarea></p>',
   'id_form'              => 'xbug-comment-form',
   'class_form'           => 'xbug-comment-form',
   'title_reply_before'   => '<p>',
@@ -38,7 +35,7 @@ if ( have_comments() ) {
   wp_list_comments( array(
     'short_ping' => true,
     'avatar_size'       => 64,
-    'reply_text' => '回复',
+    'reply_text' => '<i class="fa fa-reply fa-lg" aria-hidden="true"></i> 回复',
     'callback' => 'xbug_comment_list'
   ) );
   echo '</ul>';

@@ -7,11 +7,12 @@ $templateDirUri = esc_url(get_template_directory_uri());
 <div id="post-<?php the_ID(); ?>" <?php post_class($class= 'mdl-cell mdl-cell--12-col mdl-card'); ?>>
   <div class="mdl-card__title">
     <h4 class="mdl-card__title-text">
+      <label class="mdl-card__title-tag"><?php the_category(', '); ?></label>
       <?php
       $current_permalink = esc_url(get_permalink());
       the_title(sprintf('<a href="%s">', $current_permalink), '</a>&nbsp;&nbsp;
         <a href="' . $current_permalink . '" target="_blank" title="新窗口打开">
-          <i class="fa fa-external-link"></i>
+          <i class="fa fa-external-link-square"></i>
         </a>');
       ?>
     </h4>

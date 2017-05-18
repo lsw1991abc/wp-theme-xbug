@@ -91,12 +91,11 @@ function xbug_comment_list($comment, $args, $depth) {
   <div>
     <div class="comment-avatar">' . get_avatar($comment->comment_author_email, $size = '64') . '</div>
     <div class="comment">
-      <span class="comment-span"><a href="#">' . get_comment_author_link() . '</a></span>
+      <span class="comment-span">[ <time>' . get_comment_time('Y-m-d H:i ') . '</time> ]&nbsp;<a href="#">' . get_comment_author_link() . '</a>&nbsp;说：</span>
       <div class="comment-text">
          ' . get_comment_text() . '
       </div>
 	    <div class="comment-footer">
-        <time>' . get_comment_time('Y-m-d H:i ') . '</time>
         ' . get_comment_reply_link(array_merge($args, array(
           'add_below' => 'div-comment',
           'depth' => $depth,

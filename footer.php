@@ -30,9 +30,10 @@ $templateDirUri = esc_url(get_template_directory_uri());
 <footer class="mdl-mini-footer">
   <div class="mdl-mini-footer--left-section">
     <ul class="mdl-mini-footer--link-list">
-      <li>Copyright &copy; 2010-2016 xBug All rights reserved.</li>
+      <li>Copyright &copy; 2012-2017 xBug All rights reserved.</li>
       <li>Powered by <a href="http://wordpress.org/" target="_blank">WordPress</a>.</li>
-      <li>Theme by <a href="http://theme.xbug.lol/" target="_blank" title="笑谈xBug">xBug</a>.</li>
+      <li>Theme by <a href="https://theme.xbug.lol/" target="_blank" title="笑谈xBug">xBug</a>.</li>
+      <li>Hosted by <a href="http://www.vultr.com/?ref=7145543" target="_blank" title="Vultr">Vultr</a>.</li>
     </ul>
   </div>
   <div class="mdl-mini-footer--right-section">
